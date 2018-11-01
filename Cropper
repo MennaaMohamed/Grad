@@ -1,0 +1,19 @@
+import cv2
+import numpy as np
+
+if __name__ == '__main__':
+    # Read image
+    im = cv2.imread("I001BE34.JPG")
+    img = cv2.resize(im, (0, 0), fx=0.2, fy=0.2)
+
+    # Select ROI
+    r = cv2.selectROI(img)
+
+    # Crop image
+    imCrop = img[int(r[1]):int(r[1] + r[3]), int(r[0]):int(r[0] + r[2])]
+
+    # Display cropped image
+    cv2.imshow("Image", imCrop)
+    cv2.imwrite("CROP1.JPG",imCrop)
+    cv2.waitKey(0)
+
