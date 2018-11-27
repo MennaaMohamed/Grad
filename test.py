@@ -46,25 +46,42 @@ def adjust_gamma(image, gamma=1.0):
    return cv2.LUT(image, table)
 
 def preprocess(img):
+    ##Resize
+    img = cv2.resize(img, (img_rows, img_cols))
+
     ##GreyScale
     img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
+    # Adaptive Equalization
+    img = exposure.equalize_adapthist(img, clip_limit=0.03) #0.57!! farrah(1), 0.75 norm/abn
+    img = img_as_ubyte(img)
+
+    #mngheir khales == 0.607, 0.57
+    #img = img_as_ubyte(img)
+
+    return img
+
+def preprocess2(img):
     ##Resize
     img = cv2.resize(img, (img_rows, img_cols))
+
+    ##GreyScale
+    img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
     ##Exposure
     #img = exposure.equalize_adapthist(img, clip_limit=0.03)
     #img = img_as_ubyte(img)
 
     # Contrast stretching
-    p2, p98 = np.percentile(img, (2, 98))
-    img = exposure.rescale_intensity(img, in_range=(p2, p98)) #0.64!! farrah(1), 0.65 norm/abn
+    #p2, p98 = np.percentile(img, (2, 98))
+    #img = exposure.rescale_intensity(img, in_range=(p2, p98)) #0.64!! farrah(1), 0.65 norm/abn
 
     # Histogram Equalization
     #img = exposure.equalize_hist(img) #vry bad 0.39!! farrah(1), 0.6 norm/abn
 
     # Adaptive Equalization
     #img = exposure.equalize_adapthist(img, clip_limit=0.03) #0.57!! farrah(1), 0.75 norm/abn
+    #img = img_as_ubyte(img)
 
     #mngheir khales == 0.607, 0.57
     #img = img_as_ubyte(img)
@@ -87,7 +104,7 @@ def feature_orb(img):
 
 def loadimages():
 
-    mypath = "datatemp/"
+    mypath = "hybrid/"
     i = 0
     lbl = 0
 
@@ -99,11 +116,22 @@ def loadimages():
 
                 for img in images:
                     label = lbl
+                    imgname = img
+
                     img_path = newpath+img
                     img = cv2.imread(img_path)
 
+                    print(imgname)
+
+                    if imgname.find("radio") == -1:
+                        print("doesnt contain radio (from mura)")
+                        img = preprocess(img)
+                    else:
+                        print("contains radio")
+                        img = preprocess2(img)
+
                     ####Call preprocess function here.####
-                    img = preprocess(img)
+                    #img = preprocess(img)
                     #img = cv2.cvtColor(img, cv2.COLOR_GRAY2RGB)
                     ###Call Feature Extraction. ###
                     #img = feature_hog(img)
@@ -125,7 +153,7 @@ def loadimages():
 def main():
 
     xtotal, ytotal = loadimages()
-    x_train, x_test, y_train, y_test = train_test_split(xtotal, ytotal, test_size=0.25, random_state=42)
+    x_train, x_test, y_train, y_test = train_test_split(xtotal, ytotal, test_size=0.3, random_state=42)
 
     concrete_strategy_a = cs.CnnAlg()
     context = cs.Context(concrete_strategy_a)

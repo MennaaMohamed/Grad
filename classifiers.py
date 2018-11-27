@@ -10,10 +10,10 @@ from skimage import img_as_ubyte
 import csv
 from skimage.feature import hog
 from sklearn.model_selection import train_test_split
-
 from sklearn.neural_network import MLPClassifier
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.neighbors import KNeighborsClassifier
+from sklearn.naive_bayes import GaussianNB
 from keras import backend as K
 import keras
 from sklearn import svm
@@ -27,7 +27,9 @@ from keras.optimizers import SGD
 from keras.optimizers import Adam
 import pickle
 from sklearn.externals import joblib
-
+from sklearn.model_selection import cross_val_score
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.neighbors import RadiusNeighborsClassifier
 
 class Context:
 
@@ -43,36 +45,73 @@ class Strategy(metaclass=abc.ABCMeta):
     def algorithm_interface(self, x, y, xt, yt):
         pass
 
+class DecisionTreeAlg(Strategy):
+    def algorithm_interface(self, x_train, y_train, x_test, y_test):
+        clf = DecisionTreeClassifier(random_state=0)
+        clf.fit(x_train, y_train)
+        y_pred = clf.predict(x_test)
+
+        cm = confusion_matrix(y_test, y_pred)
+        acc = accuracy_score(y_test, y_pred, normalize=True, sample_weight=None)
+        cr = classification_report(y_test, y_pred)
+        print(cm)
+        print(acc)
+        print(cr)
+        return cm, acc, cr
+
+class NaiveAlg(Strategy):
+    def algorithm_interface(self, x_train, y_train, x_test, y_test):
+
+        clf = GaussianNB()
+        clf.fit(x_train, y_train)
+        y_pred = clf.predict(x_test)
+
+        cm = confusion_matrix(y_test, y_pred)
+        acc = accuracy_score(y_test, y_pred, normalize=True, sample_weight=None)
+        cr = classification_report(y_test, y_pred)
+        print (cm)
+        print(acc)
+        print(cr)
+        return cm, acc, cr
+
 class CnnAlg(Strategy):
     #Very Small Arch From Scratch
     # algorithm 1
     def __init__(self):
 
-        self.num_classes = 3
-        self.batch_size = 128
+        self.num_classes = 4
+        self.batch_size = 31
         self.img_rows = 224
         self.img_cols = 224
-        self.epochs = 12
+        self.epochs = 20
 
     def algorithm_interface(self, x_train, y_train, x_test, y_test):
+
+        #x_test, x_validate, y_test, y_validate = train_test_split(x_test, y_test, test_size=0.5, random_state=42)
+
         if K.image_data_format() == 'channels_first':
             x_train = x_train.reshape(x_train.shape[0], 1, self.img_rows, self.img_cols)
             x_test = x_test.reshape(x_test.shape[0], 1, self.img_rows, self.img_cols)
+            #x_validate = x_validate.reshape(x_validate.shape[0], 1, self.img_rows, self.img_cols)
             input_shape = (1, self.img_rows, self.img_cols)
         else:
             x_train = x_train.reshape(x_train.shape[0], self.img_rows, self.img_cols, 1)
             x_test = x_test.reshape(x_test.shape[0], self.img_rows, self.img_cols, 1)
+            #x_validate = x_validate.reshape(x_validate.shape[0], self.img_rows, self.img_cols, 1)
             input_shape = (self.img_rows, self.img_cols, 1)
 
-        # more reshaping
+
+        # normalize
         x_train = x_train.astype('float32')
         x_test = x_test.astype('float32')
         x_train /= 255
         x_test /= 255
 
+
         # convert class vectors
         y_train = keras.utils.to_categorical(y_train, self.num_classes)
         y_test = keras.utils.to_categorical(y_test, self.num_classes)
+        #y_validate = keras.utils.to_categorical(y_validate, self.num_classes)
 
         model = Sequential()
 
@@ -103,30 +142,34 @@ class CnnAlg(Strategy):
 
         model.add(Activation('softmax'))
 
+        '''
         datagen = ImageDataGenerator(
             featurewise_std_normalization=True,
-            rotation_range=10,
-            horizontal_flip=True)
-
+            rotation_range=40,
+            zoom_range = 0.2,
+            vertical_flip=True,
+            horizontal_flip=True,
+            rescale = 1. / 255,
+            fill_mode = 'nearest')
+        
         datagen.fit(x_train)
+        '''
+
 
         model.compile(optimizer=Adam(lr=0.0001), loss='categorical_crossentropy', metrics=['accuracy'])
         #model.compile(optimizer=Adam(), loss='categorical_crossentropy', metrics=['accuracy'])
 
         # fits the model on batches with real-time data augmentation:
-        model.fit_generator(datagen.flow(x_train, y_train, batch_size=32, save_to_dir="dataaug/"),
-                            epochs=self.epochs, verbose=1 )
+        #model.fit_generator(datagen.flow(x_train, y_train, batch_size=11, save_to_dir="dataaug2/"),
+        #                    epochs=self.epochs)
 
 
         # Adam combines the good properties of Adadelta and RMSprop and hence tend to do better for most of the problems.
 
         #validation_data (x_test, y_test);
-       # model.fit(x_train, y_train,
-        #          batch_size=self.batch_size,
-        #          epochs=self.epochs,
-        #          verbose=1)
+        model.fit(x_train, y_train, batch_size=self.batch_size, epochs=self.epochs)
 
-        score = model.evaluate(x_test, y_test, verbose=0)
+        score = model.evaluate(x_test, y_test)
         print('Test loss:', score[0])
         print('Test accuracy:', score[1])
 
@@ -141,11 +184,14 @@ class SvmAlg(Strategy):
         svclassifier = SVC(kernel='linear')
         svclassifier.fit(x_train, y_train)
         y_pred = svclassifier.predict(x_test)
-        joblib.dump(svclassifier, 'models/svm8.joblib')
+        #joblib.dump(svclassifier, 'models/svm8.joblib')
 
         cm = confusion_matrix(y_test, y_pred)
         acc = accuracy_score(y_test, y_pred, normalize=True, sample_weight=None)
         cr = classification_report(y_test, y_pred)
+        print (cm)
+        print(acc)
+        print(cr)
         return cm, acc, cr
 
 class KnnAlg(Strategy):
@@ -159,6 +205,9 @@ class KnnAlg(Strategy):
         cm = confusion_matrix(y_test, y_pred)
         acc = accuracy_score(y_test, y_pred, normalize=True, sample_weight=None)
         cr = classification_report(y_test, y_pred)
+        print(cm)
+        print(acc)
+        print(cr)
         return cm, acc, cr
 
 class RandomForestAlg(Strategy):
@@ -173,8 +222,10 @@ class RandomForestAlg(Strategy):
         acc = accuracy_score(y_test, y_pred, normalize=True, sample_weight=None)
         cr = classification_report(y_test, y_pred)
         print(rfclassifier.feature_importances_)
+        print (cm)
+        print(acc)
+        print(cr)
         return cm, acc, cr
-        pass
 
 class MlpAlg(Strategy):
     def algorithm_interface(self, x_train, y_train, x_test, y_test):
