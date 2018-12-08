@@ -24,7 +24,16 @@ def Count_XPixels():
         pos.append(i)
         pixels=0
 
-    return result,pos
+    return result,pos,edged.shape[0]
+
+
+def Graph_Xaxis(result,pos,xsize):
+    print(result)
+    print(pos)
+    axes = plt.gca()
+    axes.set_xlim([0,xsize])
+    plt.plot(pos,result)
+    plt.xlabel('X-axis Histogram')
 
 def Count_YPixels():
     edged = cv2.imread('BoneAngle.jpg',0)
@@ -40,21 +49,39 @@ def Count_YPixels():
         result.append(pixels)
         pos.append(i)
         pixels=0
+    return result,pos,edged.shape[1]
 
-    return result,pos
 
-def Result(count,pos):
+
+def Graph_Yaxis(result,pos,ysize):
+    print(result)
+    print(pos)
+    axes = plt.gca()
+    axes.set_xlim([0, ysize])
+    plt.plot(result, pos)
+    plt.ylabel('Y-axis Histogram')
+
+
+def BothOnX(count,pos):
     print(count)
     print(pos)
     axes = plt.gca()
     axes.set_xlim([0, 96])
-    plt.plot(count)
+    plt.plot(pos,count)
     plt.ylabel('Pixels')
 
-pixel_count , pixel_pos = Count_XPixels()
-Result(pixel_count,pixel_pos)
-pixel_count , pixel_pos = Count_YPixels()
-Result(pixel_count,pixel_pos)
+# Draw on X-axis and Y-axis
 
+pixel_count , pixel_pos , maxsize = Count_XPixels()
+Graph_Xaxis(pixel_count,pixel_pos,maxsize)
+pixel_count , pixel_pos , maxsize = Count_YPixels()
+Graph_Yaxis(pixel_count,pixel_pos,maxsize)
+
+#X-axis only
+
+# pixel_count , pixel_pos , maxsize = Count_XPixels()
+# BothOnX(pixel_count,pixel_pos)
+# pixel_count , pixel_pos , maxsize = Count_YPixels()
+# BothOnX(pixel_count,pixel_pos)
 
 plt.show()
