@@ -57,7 +57,7 @@ def Graph_Yaxis(result,pos,ysize):
     print(result)
     print(pos)
     axes = plt.gca()
-    axes.set_xlim([0, ysize])
+    axes.set_ylim([0, ysize])
     plt.plot(result, pos)
     plt.ylabel('Y-axis Histogram')
 
