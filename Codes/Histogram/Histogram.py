@@ -25,14 +25,8 @@ def Count_XPixels():
         pixels=0
 
     return result,pos
-def Count_YPixels():
-    # img = cv2.imread('CROP1.jpg')
-    # gray = cv2.GaussianBlur(img, (7, 7), 0)
-    # edged = cv2.Canny(gray, 50, 100)
-    # edged = cv2.dilate(edged, None, iterations=1)
-    # edged = cv2.erode(edged, None, iterations=1)
-    # np.set_printoptions(threshold=np.nan)
 
+def Count_YPixels():
     edged = cv2.imread('BoneAngle.jpg',0)
 
     result = []
@@ -44,7 +38,7 @@ def Count_YPixels():
             if edged[j, i] == 255:
                 pixels+=1
         result.append(pixels)
-        pos.append(j)
+        pos.append(i)
         pixels=0
 
     return result,pos
