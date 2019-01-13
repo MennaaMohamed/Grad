@@ -51,8 +51,6 @@ def Count_YPixels():
         pixels=0
     return result,pos,edged.shape[1]
 
-
-
 def Graph_Yaxis(result,pos,ysize):
     print(result)
     print(pos)
@@ -60,7 +58,6 @@ def Graph_Yaxis(result,pos,ysize):
     axes.set_ylim([0, ysize])
     plt.plot(result, pos)
     plt.ylabel('Y-axis Histogram')
-
 
 def BothOnX(count,pos):
     print(count)
@@ -72,16 +69,16 @@ def BothOnX(count,pos):
 
 # Draw on X-axis and Y-axis
 
-pixel_count , pixel_pos , maxsize = Count_XPixels()
-Graph_Xaxis(pixel_count,pixel_pos,maxsize)
-pixel_count , pixel_pos , maxsize = Count_YPixels()
-Graph_Yaxis(pixel_count,pixel_pos,maxsize)
+# pixel_count , pixel_pos , maxsize = Count_XPixels()
+# Graph_Xaxis(pixel_count,pixel_pos,maxsize)
+# pixel_count , pixel_pos , maxsize = Count_YPixels()
+# Graph_Yaxis(pixel_count,pixel_pos,maxsize)
 
 #X-axis only
 
-# pixel_count , pixel_pos , maxsize = Count_XPixels()
-# BothOnX(pixel_count,pixel_pos)
-# pixel_count , pixel_pos , maxsize = Count_YPixels()
-# BothOnX(pixel_count,pixel_pos)
+pixel_count , pixel_pos , maxsize = Count_XPixels()
+BothOnX(pixel_count,pixel_pos)
+pixel_count , pixel_pos , maxsize = Count_YPixels()
+BothOnX(pixel_count,pixel_pos)
 
 plt.show()

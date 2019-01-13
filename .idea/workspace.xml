@@ -10,7 +10,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Grad$Histogram.coverage" NAME="Histogram Coverage Results" MODIFIED="1545789271373" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Codes/Histogram" />
+    <SUITE FILE_PATH="coverage/Grad$Histogram.coverage" NAME="Histogram Coverage Results" MODIFIED="1547409705798" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Codes/Histogram" />
     <SUITE FILE_PATH="coverage/Grad$Sklearn_FeatureSelection.coverage" NAME="Sklearn-FeatureSelection Coverage Results" MODIFIED="1541990025959" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Codes" />
     <SUITE FILE_PATH="coverage/Grad$test.coverage" NAME="test Coverage Results" MODIFIED="1541990673108" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
@@ -26,11 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Histogram.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Histogram.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Codes/Histogram/Histogram.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="84" selection-start-line="84" selection-end-line="84" />
+            <state relative-caret-position="51">
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
                 <element signature="e#752#890#0" />
@@ -38,11 +38,6 @@
               </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BoneAngle.jpg" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Codes/Histogram/BoneAngle.jpg">
-          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file leaf-file-name="CROP1.JPG" pinned="false" current-in-tab="false">
@@ -53,8 +48,8 @@
       <file leaf-file-name="classifiers.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classifiers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+            <state relative-caret-position="229">
+              <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
                 <element signature="e#1204#1379#0" />
@@ -63,7 +58,6 @@
                 <element signature="e#2030#2455#0" />
                 <element signature="e#2485#6126#0" />
                 <element signature="e#2776#6126#0" />
-                <element signature="e#6156#6690#0" />
                 <element signature="e#6793#7254#0" />
                 <element signature="e#7293#7916#0" />
                 <element signature="e#7946#8849#0" />
@@ -71,6 +65,39 @@
                 <element signature="e#9072#12591#0" />
                 <element signature="e#9311#12591#0" />
                 <element signature="e#12630#16018#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HarrisCorner.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HarrisCorner.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fast.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fast.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="brief.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/brief.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -121,7 +148,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="10" />
     <option name="width" value="1346" />
     <option name="height" value="728" />
@@ -150,7 +177,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -166,19 +192,19 @@
             <path>
               <item name="Grad" type="b2602c69:ProjectViewProjectNode" />
               <item name="Grad" type="462c0819:PsiDirectoryNode" />
-              <item name="Codes" type="462c0819:PsiDirectoryNode" />
-              <item name="Histogram" type="462c0819:PsiDirectoryNode" />
+              <item name="hybrid" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -338,16 +364,17 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.19771242" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30718955" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22163388" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2246596" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" visible="true" weight="0.3547655" />
@@ -384,27 +411,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/classifiers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1309">
-          <caret line="90" column="51" selection-start-line="90" selection-start-column="51" selection-end-line="90" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Codes/Sklearn-FeatureSelection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="56" column="13" lean-forward="true" selection-start-line="56" selection-start-column="13" selection-end-line="56" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/classifiers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -491,10 +497,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Codes/Histogram/CROP1.JPG">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Codes/Histogram/BoneAngle.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/brief.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HarrisCorner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/classifiers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+        <state relative-caret-position="229">
+          <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
             <element signature="e#1204#1379#0" />
@@ -503,7 +533,6 @@
             <element signature="e#2030#2455#0" />
             <element signature="e#2485#6126#0" />
             <element signature="e#2776#6126#0" />
-            <element signature="e#6156#6690#0" />
             <element signature="e#6793#7254#0" />
             <element signature="e#7293#7916#0" />
             <element signature="e#7946#8849#0" />
@@ -515,10 +544,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/fast.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Codes/Histogram/Histogram.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="84" selection-start-line="84" selection-end-line="84" />
+        <state relative-caret-position="51">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
             <element signature="e#752#890#0" />
@@ -526,12 +564,6 @@
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Codes/Histogram/CROP1.JPG">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Codes/Histogram/BoneAngle.jpg">
-      <provider selected="true" editor-type-id="images" />
     </entry>
   </component>
 </project>
