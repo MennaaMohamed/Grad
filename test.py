@@ -10,7 +10,7 @@ import csv
 from skimage.feature import hog
 from sklearn.model_selection  import train_test_split
 import classifiers as cs
-import phog as PHOG
+# import phog as PHOG
 from os import walk, getcwd
 import pywt
 import mahotas as mt
@@ -21,6 +21,8 @@ from scipy import stats
 from mahotas.features import surf
 from skimage.filters import gaussian
 from skimage.segmentation import active_contour
+
+from Codes.Histogram.Histogram import Count_XPixels, Count_YPixels
 
 img_rows = 224
 img_cols = 224
@@ -349,15 +351,24 @@ def loadimages():
                     #img = cv2.cvtColor(img, cv2.COLOR_GRAY2RGB)
 
                     temp=[]
+                    arr1,arr2 = Count_XPixels(img)
+                    # arr1,arr2 = Count_YPixels(img)
 
+                    temp.extend(arr1)
+                    temp.extend(arr2)
+
+
+                    # img = np.asarray(temp)
+
+                    # temp.extend(arr1)
                     #arr1 = haralick_features(img)
                     #temp.extend(arr1)
 
                     #arr2 = binary_features(img)
                     #temp.extend(arr2)
 
-                    arr3 = stat_features(img)
-                    temp.extend(arr3)
+                    # arr3 = stat_features(img)
+                    # temp.extend(arr3)
 
                     img = np.asarray(temp)
 
