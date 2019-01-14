@@ -6,7 +6,5 @@
     </content>
     <orderEntry type="jdk" jdkName="Python 3.5 (python-3.5.4-package)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="testproject" />
-    <orderEntry type="module" module-name="final" />
   </component>
 </module>

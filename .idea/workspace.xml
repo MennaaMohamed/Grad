@@ -38,7 +38,13 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+<<<<<<< HEAD
     <SUITE FILE_PATH="coverage/Grad$test.coverage" NAME="test Coverage Results" MODIFIED="1543344274915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+=======
+    <SUITE FILE_PATH="coverage/Grad$Histogram.coverage" NAME="Histogram Coverage Results" MODIFIED="1547409705798" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Codes/Histogram" />
+    <SUITE FILE_PATH="coverage/Grad$Sklearn_FeatureSelection.coverage" NAME="Sklearn-FeatureSelection Coverage Results" MODIFIED="1541990025959" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Codes" />
+    <SUITE FILE_PATH="coverage/Grad$test.coverage" NAME="test Coverage Results" MODIFIED="1541990673108" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+>>>>>>> 7e3c64199c3c7cbf11b638391a6da088a03fd565
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="2104868285">
@@ -83,16 +89,72 @@
     </session>
   </component>
   <component name="FileEditorManager">
+<<<<<<< HEAD
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
               <caret line="315" column="38" selection-start-line="315" selection-start-column="38" selection-end-line="315" selection-end-column="38" />
+=======
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="Histogram.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Codes/Histogram/Histogram.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+                <element signature="e#752#890#0" />
+                <element signature="e#917#1243#0" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="CROP1.JPG" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Codes/Histogram/CROP1.JPG">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file leaf-file-name="classifiers.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/classifiers.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="229">
+              <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+                <element signature="e#1204#1379#0" />
+                <element signature="e#1429#1510#0" />
+                <element signature="e#1549#1998#0" />
+                <element signature="e#2030#2455#0" />
+                <element signature="e#2485#6126#0" />
+                <element signature="e#2776#6126#0" />
+                <element signature="e#6793#7254#0" />
+                <element signature="e#7293#7916#0" />
+                <element signature="e#7946#8849#0" />
+                <element signature="e#8879#8956#0" />
+                <element signature="e#9072#12591#0" />
+                <element signature="e#9311#12591#0" />
+                <element signature="e#12630#16018#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HarrisCorner.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HarrisCorner.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
+>>>>>>> 7e3c64199c3c7cbf11b638391a6da088a03fd565
+            </state>
+          </provider>
+        </entry>
+      </file>
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classifiers.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -112,6 +174,25 @@
                 <element signature="e#9263#9320#0" />
                 <element signature="e#9350#12869#0" />
                 <element signature="e#12908#16296#0" />
+=======
+      <file leaf-file-name="fast.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fast.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="brief.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/brief.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+>>>>>>> 7e3c64199c3c7cbf11b638391a6da088a03fd565
               </folding>
             </state>
           </provider>
@@ -145,7 +226,12 @@
         <option value="$PROJECT_DIR$/New_Phog.py" />
         <option value="$PROJECT_DIR$/Svm_features_trial.py" />
         <option value="$PROJECT_DIR$/classifiers.py" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/test.py" />
+=======
+        <option value="$PROJECT_DIR$/Codes/Sklearn-FeatureSelection.py" />
+        <option value="$PROJECT_DIR$/Codes/Histogram/Histogram.py" />
+>>>>>>> 7e3c64199c3c7cbf11b638391a6da088a03fd565
       </list>
     </option>
   </component>
@@ -155,11 +241,40 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+<<<<<<< HEAD
   <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-337" />
     <option name="y" value="3" />
     <option name="width" value="845" />
     <option name="height" value="744" />
+=======
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="10" />
+    <option name="width" value="1346" />
+    <option name="height" value="728" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Python</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>PyArgumentListInspection</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+>>>>>>> 7e3c64199c3c7cbf11b638391a6da088a03fd565
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -174,6 +289,19 @@
               <item name="Grad" type="b2602c69:ProjectViewProjectNode" />
               <item name="Grad" type="462c0819:PsiDirectoryNode" />
             </path>
+<<<<<<< HEAD
+=======
+            <path>
+              <item name="Grad" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Grad" type="462c0819:PsiDirectoryNode" />
+              <item name="Codes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Grad" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Grad" type="462c0819:PsiDirectoryNode" />
+              <item name="hybrid" type="462c0819:PsiDirectoryNode" />
+            </path>
+>>>>>>> 7e3c64199c3c7cbf11b638391a6da088a03fd565
           </expand>
           <select />
         </subPane>
@@ -183,7 +311,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -197,8 +325,13 @@
       </list>
     </option>
   </component>
+<<<<<<< HEAD
   <component name="RunManager" selected="Python.test">
     <configuration name="PHogFeatures" type="PythonConfigurationType" factoryName="Python" temporary="true">
+=======
+  <component name="RunManager" selected="Python.Histogram">
+    <configuration name="Histogram" type="PythonConfigurationType" factoryName="Python" temporary="true">
+>>>>>>> 7e3c64199c3c7cbf11b638391a6da088a03fd565
       <module name="demo" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -206,11 +339,20 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
+<<<<<<< HEAD
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PHogFeatures.py" />
+=======
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Codes/Histogram" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Codes/Histogram/Histogram.py" />
+>>>>>>> 7e3c64199c3c7cbf11b638391a6da088a03fd565
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -219,7 +361,11 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+<<<<<<< HEAD
     <configuration name="Svm_features_trial" type="PythonConfigurationType" factoryName="Python" temporary="true">
+=======
+    <configuration name="Sklearn-FeatureSelection" type="PythonConfigurationType" factoryName="Python" temporary="true">
+>>>>>>> 7e3c64199c3c7cbf11b638391a6da088a03fd565
       <module name="demo" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -227,11 +373,16 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Codes" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+<<<<<<< HEAD
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Svm_features_trial.py" />
+=======
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Codes/Sklearn-FeatureSelection.py" />
+>>>>>>> 7e3c64199c3c7cbf11b638391a6da088a03fd565
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -240,7 +391,11 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+<<<<<<< HEAD
     <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+=======
+    <configuration name="amira" type="PythonConfigurationType" factoryName="Python" temporary="true">
+>>>>>>> 7e3c64199c3c7cbf11b638391a6da088a03fd565
       <module name="demo" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -253,7 +408,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+<<<<<<< HEAD
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+=======
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/amira.py" />
+>>>>>>> 7e3c64199c3c7cbf11b638391a6da088a03fd565
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -305,19 +464,34 @@
       <method v="2" />
     </configuration>
     <list>
+<<<<<<< HEAD
       <item itemvalue="Python.test" />
       <item itemvalue="Python.trial (1)" />
       <item itemvalue="Python.PHogFeatures" />
       <item itemvalue="Python.trial (2)" />
       <item itemvalue="Python.Svm_features_trial" />
+=======
+      <item itemvalue="Python.demo1" />
+      <item itemvalue="Python.amira" />
+      <item itemvalue="Python.test" />
+      <item itemvalue="Python.Sklearn-FeatureSelection" />
+      <item itemvalue="Python.Histogram" />
+>>>>>>> 7e3c64199c3c7cbf11b638391a6da088a03fd565
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Histogram" />
         <item itemvalue="Python.test" />
+<<<<<<< HEAD
         <item itemvalue="Python.Svm_features_trial" />
         <item itemvalue="Python.trial (2)" />
         <item itemvalue="Python.PHogFeatures" />
         <item itemvalue="Python.trial (1)" />
+=======
+        <item itemvalue="Python.Sklearn-FeatureSelection" />
+        <item itemvalue="Python.amira" />
+        <item itemvalue="Python.demo1" />
+>>>>>>> 7e3c64199c3c7cbf11b638391a6da088a03fd565
       </list>
     </recent_temporary>
   </component>
@@ -345,6 +519,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+<<<<<<< HEAD
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24925596" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -354,6 +529,25 @@
       <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49924356" visible="true" weight="0.3878887" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+=======
+    <editor active="true" />
+    <layout>
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Python Console" order="7" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30718955" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2246596" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" id="SciView" order="3" visible="true" weight="0.3547655" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+>>>>>>> 7e3c64199c3c7cbf11b638391a6da088a03fd565
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3289689" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
@@ -375,6 +569,7 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+<<<<<<< HEAD
   <component name="editorHistoryManager">
     <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/keras/utils/conv_utils.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -394,13 +589,36 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" selection-start-line="2" selection-end-line="2" />
+=======
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/demo2.py</url>
+          <line>17</line>
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="3" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/classifiers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="19" lean-forward="true" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
+>>>>>>> 7e3c64199c3c7cbf11b638391a6da088a03fd565
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/keras/backend/tensorflow_backend.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="340">
           <caret line="20" column="41" lean-forward="true" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
+=======
+        <state relative-caret-position="153">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+>>>>>>> 7e3c64199c3c7cbf11b638391a6da088a03fd565
         </state>
       </provider>
     </entry>
@@ -408,27 +626,43 @@
     <entry file="file://$USER_HOME$/python-3.6.7-package/Lib/site-packages/pymatbridge/__init__.py" />
     <entry file="file://$USER_HOME$/python-3.5.4-package/Lib/site-packages/matlab/engine/matlabengine.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="1428">
           <caret line="89" column="13" selection-start-line="89" selection-start-column="13" selection-end-line="89" selection-end-column="13" />
+=======
+        <state relative-caret-position="663">
+          <caret line="129" selection-start-line="129" selection-end-line="129" />
+>>>>>>> 7e3c64199c3c7cbf11b638391a6da088a03fd565
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/python-3.5.4-package/Lib/site-packages/pandas/compat/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="160">
           <caret line="37" column="13" lean-forward="true" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+=======
+        <state relative-caret-position="1995">
+          <caret line="95" lean-forward="true" selection-start-line="95" selection-end-line="95" />
+>>>>>>> 7e3c64199c3c7cbf11b638391a6da088a03fd565
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/python-3.5.4-package/Lib/site-packages/pandas/tests/sparse/frame/test_to_from_scipy.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="51">
           <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+=======
+        <state relative-caret-position="819">
+          <caret line="129" lean-forward="true" selection-start-line="129" selection-end-line="129" />
+>>>>>>> 7e3c64199c3c7cbf11b638391a6da088a03fd565
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/python-3.5.4-package/Lib/site-packages/matlab/_internal/mlarray_utils.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="143">
           <caret line="118" selection-start-line="118" selection-end-line="118" />
         </state>
@@ -488,11 +722,38 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1096" lean-forward="true" selection-start-line="1096" selection-end-line="1096" />
+=======
+        <state relative-caret-position="424">
+          <caret line="56" column="13" selection-start-line="56" selection-start-column="13" selection-end-line="56" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classifiers.py">
+    <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="103" selection-start-line="103" selection-end-line="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Codes/Histogram/CROP1.JPG">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Codes/Histogram/BoneAngle.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/brief.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+>>>>>>> 7e3c64199c3c7cbf11b638391a6da088a03fd565
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HarrisCorner.py">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="294">
           <caret line="217" column="21" selection-start-line="217" selection-start-column="6" selection-end-line="217" selection-end-column="21" />
           <folding>
@@ -509,14 +770,61 @@
             <element signature="e#9263#9320#0" />
             <element signature="e#9350#12869#0" />
             <element signature="e#12908#16296#0" />
+=======
+        <state>
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+>>>>>>> 7e3c64199c3c7cbf11b638391a6da088a03fd565
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
+    <entry file="file://$PROJECT_DIR$/classifiers.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="153">
           <caret line="315" column="38" selection-start-line="315" selection-start-column="38" selection-end-line="315" selection-end-column="38" />
+=======
+        <state relative-caret-position="229">
+          <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#1204#1379#0" />
+            <element signature="e#1429#1510#0" />
+            <element signature="e#1549#1998#0" />
+            <element signature="e#2030#2455#0" />
+            <element signature="e#2485#6126#0" />
+            <element signature="e#2776#6126#0" />
+            <element signature="e#6793#7254#0" />
+            <element signature="e#7293#7916#0" />
+            <element signature="e#7946#8849#0" />
+            <element signature="e#8879#8956#0" />
+            <element signature="e#9072#12591#0" />
+            <element signature="e#9311#12591#0" />
+            <element signature="e#12630#16018#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fast.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Codes/Histogram/Histogram.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+            <element signature="e#752#890#0" />
+            <element signature="e#917#1243#0" />
+          </folding>
+>>>>>>> 7e3c64199c3c7cbf11b638391a6da088a03fd565
         </state>
       </provider>
     </entry>
