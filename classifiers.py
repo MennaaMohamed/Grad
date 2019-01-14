@@ -1,35 +1,39 @@
-import abc
 import cv2
 import numpy as np
 import pandas as pd
 import os
 import matplotlib.pyplot as plt
-from keras.preprocessing.image import ImageDataGenerator
 from skimage import exposure, transform
 from skimage import img_as_ubyte
 import csv
 from skimage.feature import hog
 from sklearn.model_selection import train_test_split
+from sklearn.svm import LinearSVC
+from sklearn.feature_selection import RFE
+from sklearn import svm
+from sklearn import datasets
+from keras.optimizers import SGD
+import pickle
+from sklearn.model_selection import cross_val_score
+from sklearn.neighbors import RadiusNeighborsClassifier
+
 from sklearn.neural_network import MLPClassifier
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.naive_bayes import GaussianNB
 from keras import backend as K
 import keras
-from sklearn import svm
+import abc
 from sklearn.svm import SVC
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import classification_report, confusion_matrix
 from keras.models import Sequential
 from keras.layers import Dense, Dropout, Flatten, Activation
 from keras.layers import Conv2D, MaxPooling2D, ZeroPadding2D, BatchNormalization
-from keras.optimizers import SGD
 from keras.optimizers import Adam
-import pickle
 from sklearn.externals import joblib
-from sklearn.model_selection import cross_val_score
 from sklearn.tree import DecisionTreeClassifier
-from sklearn.neighbors import RadiusNeighborsClassifier
+
 
 class Context:
 
@@ -74,125 +78,126 @@ class NaiveAlg(Strategy):
         print(cr)
         return cm, acc, cr
 
-class CnnAlg(Strategy):
-    #Very Small Arch From Scratch
-    # algorithm 1
-    def __init__(self):
-
-        self.num_classes = 4
-        self.batch_size = 31
-        self.img_rows = 224
-        self.img_cols = 224
-        self.epochs = 20
-
-    def algorithm_interface(self, x_train, y_train, x_test, y_test):
-
-        #x_test, x_validate, y_test, y_validate = train_test_split(x_test, y_test, test_size=0.5, random_state=42)
-
-        if K.image_data_format() == 'channels_first':
-            x_train = x_train.reshape(x_train.shape[0], 1, self.img_rows, self.img_cols)
-            x_test = x_test.reshape(x_test.shape[0], 1, self.img_rows, self.img_cols)
-            #x_validate = x_validate.reshape(x_validate.shape[0], 1, self.img_rows, self.img_cols)
-            input_shape = (1, self.img_rows, self.img_cols)
-        else:
-            x_train = x_train.reshape(x_train.shape[0], self.img_rows, self.img_cols, 1)
-            x_test = x_test.reshape(x_test.shape[0], self.img_rows, self.img_cols, 1)
-            #x_validate = x_validate.reshape(x_validate.shape[0], self.img_rows, self.img_cols, 1)
-            input_shape = (self.img_rows, self.img_cols, 1)
-
-
-        # normalize
-        x_train = x_train.astype('float32')
-        x_test = x_test.astype('float32')
-        x_train /= 255
-        x_test /= 255
-
-
-        # convert class vectors
-        y_train = keras.utils.to_categorical(y_train, self.num_classes)
-        y_test = keras.utils.to_categorical(y_test, self.num_classes)
-        #y_validate = keras.utils.to_categorical(y_validate, self.num_classes)
-
-        model = Sequential()
-
-        model.add(Conv2D(32, (3, 3), input_shape=input_shape))
-        model.add(Activation('relu'))
-
-        BatchNormalization(axis=-1)
-        model.add(Conv2D(32, (3, 3)))
-        model.add(Activation('relu'))
-        model.add(MaxPooling2D(pool_size=(2, 2)))
-
-        BatchNormalization(axis=-1)
-        model.add(Conv2D(64, (3, 3)))
-        model.add(Activation('relu'))
-        BatchNormalization(axis=-1)
-        model.add(Conv2D(64, (3, 3)))
-        model.add(Activation('relu'))
-        model.add(MaxPooling2D(pool_size=(2, 2)))
-
-        model.add(Flatten())
-
-        BatchNormalization()
-        model.add(Dense(512))
-        model.add(Activation('relu'))
-        BatchNormalization()
-        model.add(Dropout(0.2))
-        model.add(Dense(self.num_classes))
-
-        model.add(Activation('softmax'))
-
-        '''
-        datagen = ImageDataGenerator(
-            featurewise_std_normalization=True,
-            rotation_range=40,
-            zoom_range = 0.2,
-            vertical_flip=True,
-            horizontal_flip=True,
-            rescale = 1. / 255,
-            fill_mode = 'nearest')
-        
-        datagen.fit(x_train)
-        '''
-
-
-        model.compile(optimizer=Adam(lr=0.0001), loss='categorical_crossentropy', metrics=['accuracy'])
-        #model.compile(optimizer=Adam(), loss='categorical_crossentropy', metrics=['accuracy'])
-
-        # fits the model on batches with real-time data augmentation:
-        #model.fit_generator(datagen.flow(x_train, y_train, batch_size=11, save_to_dir="dataaug2/"),
-        #                    epochs=self.epochs)
-
-
-        # Adam combines the good properties of Adadelta and RMSprop and hence tend to do better for most of the problems.
-
-        #validation_data (x_test, y_test);
-        model.fit(x_train, y_train, batch_size=self.batch_size, epochs=self.epochs)
-
-        score = model.evaluate(x_test, y_test)
-        print('Test loss:', score[0])
-        print('Test accuracy:', score[1])
-
-        model.save('modeldatatemp.h5')
-        print("Saved model to disk")
-
-        return model.summary()
+# class CnnAlg(Strategy):
+#     #Very Small Arch From Scratch
+#     # algorithm 1
+#     def __init__(self):
+#
+#         self.num_classes = 4
+#         self.batch_size = 31
+#         self.img_rows = 224
+#         self.img_cols = 224
+#         self.epochs = 20
+#
+#     def algorithm_interface(self, x_train, y_train, x_test, y_test):
+#
+#         #x_test, x_validate, y_test, y_validate = train_test_split(x_test, y_test, test_size=0.5, random_state=42)
+#
+#         if K.image_data_format() == 'channels_first':
+#             x_train = x_train.reshape(x_train.shape[0], 1, self.img_rows, self.img_cols)
+#             x_test = x_test.reshape(x_test.shape[0], 1, self.img_rows, self.img_cols)
+#             #x_validate = x_validate.reshape(x_validate.shape[0], 1, self.img_rows, self.img_cols)
+#             input_shape = (1, self.img_rows, self.img_cols)
+#         else:
+#             x_train = x_train.reshape(x_train.shape[0], self.img_rows, self.img_cols, 1)
+#             x_test = x_test.reshape(x_test.shape[0], self.img_rows, self.img_cols, 1)
+#             #x_validate = x_validate.reshape(x_validate.shape[0], self.img_rows, self.img_cols, 1)
+#             input_shape = (self.img_rows, self.img_cols, 1)
+#
+#
+#         # normalize
+#         x_train = x_train.astype('float32')
+#         x_test = x_test.astype('float32')
+#         x_train /= 255
+#         x_test /= 255
+#
+#
+#         # convert class vectors
+#         y_train = keras.utils.to_categorical(y_train, self.num_classes)
+#         y_test = keras.utils.to_categorical(y_test, self.num_classes)
+#         #y_validate = keras.utils.to_categorical(y_validate, self.num_classes)
+#
+#         model = Sequential()
+#
+#         model.add(Conv2D(32, (3, 3), input_shape=input_shape))
+#         model.add(Activation('relu'))
+#
+#         BatchNormalization(axis=-1)
+#         model.add(Conv2D(32, (3, 3)))
+#         model.add(Activation('relu'))
+#         model.add(MaxPooling2D(pool_size=(2, 2)))
+#
+#         BatchNormalization(axis=-1)
+#         model.add(Conv2D(64, (3, 3)))
+#         model.add(Activation('relu'))
+#         BatchNormalization(axis=-1)
+#         model.add(Conv2D(64, (3, 3)))
+#         model.add(Activation('relu'))
+#         model.add(MaxPooling2D(pool_size=(2, 2)))
+#
+#         model.add(Flatten())
+#
+#         BatchNormalization()
+#         model.add(Dense(512))
+#         model.add(Activation('relu'))
+#         BatchNormalization()
+#         model.add(Dropout(0.2))
+#         model.add(Dense(self.num_classes))
+#
+#         model.add(Activation('softmax'))
+#
+#         '''
+#         datagen = ImageDataGenerator(
+#             featurewise_std_normalization=True,
+#             rotation_range=40,
+#             zoom_range = 0.2,
+#             vertical_flip=True,
+#             horizontal_flip=True,
+#             rescale = 1. / 255,
+#             fill_mode = 'nearest')
+#
+#         datagen.fit(x_train)
+#         '''
+#
+#
+#         model.compile(optimizer=Adam(lr=0.0001), loss='categorical_crossentropy', metrics=['accuracy'])
+#         #model.compile(optimizer=Adam(), loss='categorical_crossentropy', metrics=['accuracy'])
+#
+#         # fits the model on batches with real-time data augmentation:
+#         #model.fit_generator(datagen.flow(x_train, y_train, batch_size=11, save_to_dir="dataaug2/"),
+#         #                    epochs=self.epochs)
+#
+#
+#         # Adam combines the good properties of Adadelta and RMSprop and hence tend to do better for most of the problems.
+#
+#         #validation_data (x_test, y_test);
+#         model.fit(x_train, y_train, batch_size=self.batch_size, epochs=self.epochs)
+#
+#         score = model.evaluate(x_test, y_test)
+#         print('Test loss:', score[0])
+#         print('Test accuracy:', score[1])
+#
+#         model.save('modeldatatemp.h5')
+#         print("Saved model to disk")
+#
+#         return model.summary()
 
 class SvmAlg(Strategy):
     # algorithm 2
     def algorithm_interface(self, x_train, y_train, x_test, y_test):
-        svclassifier = SVC(kernel='linear')
-        svclassifier.fit(x_train, y_train)
-        y_pred = svclassifier.predict(x_test)
-        #joblib.dump(svclassifier, 'models/svm8.joblib')
+             svclassifier = SVC(kernel='linear')
+             svclassifier.fit(x_train, y_train)
+             y_pred = svclassifier.predict(x_test)
+             #joblib.dump(svclassifier, 'models/svm8.joblib')
 
-        cm = confusion_matrix(y_test, y_pred)
-        acc = accuracy_score(y_test, y_pred, normalize=True, sample_weight=None)
-        cr = classification_report(y_test, y_pred)
-        print (cm)
-        print(acc)
-        print(cr)
-        return cm, acc, cr
+             cm = confusion_matrix(y_test, y_pred)
+             acc = accuracy_score(y_test, y_pred, normalize=True, sample_weight=None)
+             cr = classification_report(y_test, y_pred)
+             print (cm)
+             print(acc)
+             print(cr)
+             return cm, acc, cr
+
 
 class KnnAlg(Strategy):
     def algorithm_interface(self, x_train, y_train, x_test, y_test):
