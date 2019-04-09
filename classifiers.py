@@ -75,6 +75,7 @@ class DecisionTreeAlg(Strategy):
 class NaiveAlg(Strategy):
     def algorithm_interface(self, x_train, y_train, x_test, y_test):
 
+        '''
         xtotal = np.concatenate((x_train,x_test), axis=0)
         ytotal = np.concatenate((y_train, y_test), axis=0)
 
@@ -87,7 +88,7 @@ class NaiveAlg(Strategy):
         X_new = model.transform(xtotal)
         #joblib.dump(model, 'models/svmtransform.joblib')
         print(X_new.shape)
-        x_train, x_test, y_train, y_test = train_test_split(X_new, ytotal, test_size=0.3, random_state=42)
+        x_train, x_test, y_train, y_test = train_test_split(X_new, ytotal, test_size=0.3, random_state=42)'''
 
 
         clf = GaussianNB()
@@ -335,7 +336,7 @@ class SvmAlg(Strategy):
         x_train, x_test, y_train, y_test = train_test_split(X_new, ytotal, test_size=0.3, random_state=42)
         '''
 
-        svclassifier = SVC(kernel='linear')
+        svclassifier = SVC(kernel='poly')
         svclassifier.fit(x_train, y_train)
         y_pred = svclassifier.predict(x_test)
 
@@ -372,6 +373,7 @@ class KnnAlg(Strategy):
 class RandomForestAlg(Strategy):
     def algorithm_interface(self, x_train, y_train, x_test, y_test):
 
+        '''
         xtotal = np.concatenate((x_train, x_test), axis=0)
         ytotal = np.concatenate((y_train, y_test), axis=0)
 
@@ -384,11 +386,12 @@ class RandomForestAlg(Strategy):
         X_new = model.transform(xtotal)
         # joblib.dump(model, 'models/svmtransform.joblib')
         print(X_new.shape)
-        x_train, x_test, y_train, y_test = train_test_split(X_new, ytotal, test_size=0.3, random_state=42)
+        x_train, x_test, y_train, y_test = train_test_split(X_new, ytotal, test_size=0.3, random_state=42)'''
 
+        rfclassifier = RandomForestClassifier(n_estimators=100, random_state=0)
 
+        #rfclassifier = RandomForestClassifier(n_estimators=100, max_depth=2,random_state = 0)
 
-        rfclassifier = RandomForestClassifier(n_estimators=100, max_depth=2,random_state = 0)
         rfclassifier.fit(x_train, y_train)
         y_pred = rfclassifier.predict(x_test)
 

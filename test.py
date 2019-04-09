@@ -524,8 +524,6 @@ def loadimages():
 
                     ###Call Feature Extraction. ###
 
-
-                    img = get_features(img)
                     #print(img.shape)
                     #cv2.imwrite(imgname,img)
                     #img = gabor(img)
@@ -533,12 +531,12 @@ def loadimages():
                     #img = feature_hog_desc(img)
                     #img = cv2.cvtColor(img, cv2.COLOR_GRAY2RGB)
 
-                    temp=[]
-                    arr1,arr2 = Count_XPixels(img)
+                    # temp=[]
+                    # arr1,arr2 = Count_XPixels(img)
                     # arr1,arr2 = Count_YPixels(img)
 
-                    temp.extend(arr1)
-                    temp.extend(arr2)
+                    # temp.extend(arr1)
+                    # temp.extend(arr2)
 
 
                     # img = np.asarray(temp)
@@ -553,12 +551,15 @@ def loadimages():
                     # arr3 = stat_features(img)
                     # temp.extend(arr3)
 
-                    img = np.asarray(temp)
+                    # img = np.asarray(temp)
 
                     #img = feature_surf(img)
 
+                    img = get_features(img)
+
                     img = img.flatten()
                     imgarr = np.array([img])
+
                     print(imgarr.shape)
 
                     y = [label]
