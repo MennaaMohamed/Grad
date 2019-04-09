@@ -336,7 +336,7 @@ class SvmAlg(Strategy):
         x_train, x_test, y_train, y_test = train_test_split(X_new, ytotal, test_size=0.3, random_state=42)
         '''
 
-        svclassifier = SVC(kernel='poly')
+        svclassifier = SVC(kernel='sigmoid')
         svclassifier.fit(x_train, y_train)
         y_pred = svclassifier.predict(x_test)
 
@@ -344,13 +344,13 @@ class SvmAlg(Strategy):
         acc = accuracy_score(y_test, y_pred, normalize=True, sample_weight=None)
         cr = classification_report(y_test, y_pred)
 
-#        joblib.dump(svclassifier, 'models/svmfs.joblib')
+        #joblib.dump(svclassifier, 'models/svmfs.joblib')
 
         print (cm)
         print(acc)
         print(cr)
-
         #return cm, acc, cr
+
         pass
 
 class KnnAlg(Strategy):
@@ -373,7 +373,6 @@ class KnnAlg(Strategy):
 class RandomForestAlg(Strategy):
     def algorithm_interface(self, x_train, y_train, x_test, y_test):
 
-        '''
         xtotal = np.concatenate((x_train, x_test), axis=0)
         ytotal = np.concatenate((y_train, y_test), axis=0)
 
@@ -386,7 +385,7 @@ class RandomForestAlg(Strategy):
         X_new = model.transform(xtotal)
         # joblib.dump(model, 'models/svmtransform.joblib')
         print(X_new.shape)
-        x_train, x_test, y_train, y_test = train_test_split(X_new, ytotal, test_size=0.3, random_state=42)'''
+        x_train, x_test, y_train, y_test = train_test_split(X_new, ytotal, test_size=0.3, random_state=42)
 
         rfclassifier = RandomForestClassifier(n_estimators=100, random_state=0)
 
@@ -743,4 +742,3 @@ class CNN2(Strategy):
         evaluation = model.evaluate(x_test, y_test)
 
         print(evaluation)
-

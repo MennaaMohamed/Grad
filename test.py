@@ -526,13 +526,13 @@ def loadimages():
 
                     #print(img.shape)
                     #cv2.imwrite(imgname,img)
-                    #img = gabor(img)
+                    img = gabor(img)
                     #img = wave(img)
                     #img = feature_hog_desc(img)
                     #img = cv2.cvtColor(img, cv2.COLOR_GRAY2RGB)
-
-                    # temp=[]
-                    # arr1,arr2 = Count_XPixels(img)
+                    temp=[]
+                    arr1,arr2 = Count_XPixels(img)
+                    
                     # arr1,arr2 = Count_YPixels(img)
 
                     # temp.extend(arr1)
@@ -541,17 +541,7 @@ def loadimages():
 
                     # img = np.asarray(temp)
 
-                    # temp.extend(arr1)
-                    #arr1 = haralick_features(img)
-                    #temp.extend(arr1)
-
-                    #arr2 = binary_features(img)
-                    #temp.extend(arr2)
-
-                    # arr3 = stat_features(img)
-                    # temp.extend(arr3)
-
-                    # img = np.asarray(temp)
+                    #img = np.asarray(temp)
 
                     #img = feature_surf(img)
 
