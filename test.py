@@ -23,7 +23,6 @@ import tensorflow as tf
 import tensorflow.python.platform
 from tensorflow.python.platform import gfile
 import matplotlib.pyplot as plt
-import PHogFeatures as phogfeat
 import csv
 import pandas as pd
 import os
@@ -532,7 +531,7 @@ def loadimages():
                     #img = cv2.cvtColor(img, cv2.COLOR_GRAY2RGB)
                     temp=[]
                     arr1,arr2 = Count_XPixels(img)
-                    
+
                     # arr1,arr2 = Count_YPixels(img)
 
                     # temp.extend(arr1)
