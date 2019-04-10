@@ -65,7 +65,7 @@ def BothOnX(count,pos):
     plt.ylabel('Pixels')
 
 # Draw on X-axis and Y-axis
-
+#
 # pixel_count , pixel_pos , maxsize = Count_XPixels()
 # Graph_Xaxis(pixel_count,pixel_pos,maxsize)
 # pixel_count , pixel_pos , maxsize = Count_YPixels()
