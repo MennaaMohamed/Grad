@@ -1,33 +1,112 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="c69819b9-b5c7-4ac2-b836-48a85102bdf5" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Codes/Histogram/Histogram.py" beforeDir="false" afterPath="$PROJECT_DIR$/Codes/Histogram/Histogram.py" afterDir="false" />
+=======
+    <list default="true" id="c6de7611-72ff-4981-bc64-52e96c296322" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/PHogFeatures.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/demo.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classifiers.py" beforeDir="false" afterPath="$PROJECT_DIR$/classifiers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hybrid/bonespur/00148_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hybrid/bonespur/00148_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hybrid/bonespur/00404_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hybrid/bonespur/00404_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hybrid/bonespur/00404_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hybrid/bonespur/00956_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hybrid/bonespur/00956_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hybrid/bonespur/00956_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hybrid/bonespur/01400_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hybrid/bonespur/01400_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hybrid/bonespur/01400_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hybrid/bonespur/01422_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hybrid/bonespur/01634_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hybrid/bonespur/01634_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hybrid/bonespur/01856study2_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hybrid/bonespur/01856study2_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hybrid/bonespur/01856study2_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hybrid/bonespur/01856study2_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hybrid/bonespur/bs_radio_(4).JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hybrid/bonespur/bs_radio_(5).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hybrid/bonespur/bs_radio_(6).JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hybrid/bonespur/bs_radio_(7).JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+>>>>>>> 771718fd0174f63bac70ab04237e41d8e2a76419
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+<<<<<<< HEAD
     <SUITE FILE_PATH="coverage/Grad$Histogram.coverage" NAME="Histogram Coverage Results" MODIFIED="1552440192784" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Codes/Histogram" />
+=======
+<<<<<<< HEAD
+    <SUITE FILE_PATH="coverage/Grad$test.coverage" NAME="test Coverage Results" MODIFIED="1543344274915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+=======
+    <SUITE FILE_PATH="coverage/Grad$Histogram.coverage" NAME="Histogram Coverage Results" MODIFIED="1547409705798" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Codes/Histogram" />
+>>>>>>> 771718fd0174f63bac70ab04237e41d8e2a76419
     <SUITE FILE_PATH="coverage/Grad$Sklearn_FeatureSelection.coverage" NAME="Sklearn-FeatureSelection Coverage Results" MODIFIED="1541990025959" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Codes" />
     <SUITE FILE_PATH="coverage/Grad$test.coverage" NAME="test Coverage Results" MODIFIED="1541990673108" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+>>>>>>> 7e3c64199c3c7cbf11b638391a6da088a03fd565
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="2104868285">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="10" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.16" value="1" />
+          <entry key="project.open.time.21" value="1" />
+          <entry key="project.open.time.22" value="1" />
+          <entry key="project.open.time.27" value="2" />
+          <entry key="project.open.time.28" value="1" />
+          <entry key="project.open.time.30" value="2" />
+          <entry key="project.open.time.35" value="1" />
+          <entry key="project.open.time.36" value="1" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.opened" value="12" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="py" value="7" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Image" value="1" />
+          <entry key="Python" value="33" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="py" value="33" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="PLAIN_TEXT" value="15" />
+          <entry key="Python" value="1976" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
+<<<<<<< HEAD
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="315" column="38" selection-start-line="315" selection-start-column="38" selection-end-line="315" selection-end-column="38" />
+=======
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file leaf-file-name="Histogram.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Codes/Histogram/Histogram.py">
@@ -65,10 +144,32 @@
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
+>>>>>>> 7e3c64199c3c7cbf11b638391a6da088a03fd565
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/classifiers.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="294">
+              <caret line="217" column="21" selection-start-line="217" selection-start-column="6" selection-end-line="217" selection-end-column="21" />
+              <folding>
+                <element signature="e#1254#1429#0" />
+                <element signature="e#1479#1560#0" />
+                <element signature="e#1599#2048#0" />
+                <element signature="e#2080#2505#0" />
+                <element signature="e#2507#2532#0" />
+                <element signature="e#6378#6967#0" />
+                <element signature="e#6998#7532#0" />
+                <element signature="e#7571#8194#0" />
+                <element signature="e#8224#9127#0" />
+                <element signature="e#9157#9234#0" />
+                <element signature="e#9263#9320#0" />
+                <element signature="e#9350#12869#0" />
+                <element signature="e#12908#16296#0" />
+=======
       <file leaf-file-name="fast.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fast.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -86,6 +187,7 @@
             <state>
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
+>>>>>>> 7e3c64199c3c7cbf11b638391a6da088a03fd565
               </folding>
             </state>
           </provider>
@@ -102,8 +204,8 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>resize</find>
-      <find>xtotal</find>
+      <find>classification_report</find>
+      <find>cs</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -112,18 +214,19 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../leNet/train.py" />
-        <option value="$PROJECT_DIR$/../final/SVM-OCR-HandwrittenDigits.py" />
-        <option value="$PROJECT_DIR$/list.py" />
-        <option value="$PROJECT_DIR$/sample.csv" />
-        <option value="$PROJECT_DIR$/../final/SIFT.py" />
-        <option value="$PROJECT_DIR$/amira.py" />
-        <option value="$PROJECT_DIR$/cnn.py" />
-        <option value="$PROJECT_DIR$/demo1.py" />
-        <option value="$PROJECT_DIR$/test.py" />
+        <option value="$PROJECT_DIR$/OLDDATAFOLDERS/trial.py" />
+        <option value="$USER_HOME$/python-3.6.7-package/Lib/site-packages/pymatbridge/__init__.py" />
+        <option value="$PROJECT_DIR$/PHogFeatures.py" />
+        <option value="$PROJECT_DIR$/trial.py" />
+        <option value="$PROJECT_DIR$/New_Phog.py" />
+        <option value="$PROJECT_DIR$/Svm_features_trial.py" />
         <option value="$PROJECT_DIR$/classifiers.py" />
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/test.py" />
+=======
         <option value="$PROJECT_DIR$/Codes/Sklearn-FeatureSelection.py" />
         <option value="$PROJECT_DIR$/Codes/Histogram/Histogram.py" />
+>>>>>>> 7e3c64199c3c7cbf11b638391a6da088a03fd565
       </list>
     </option>
   </component>
@@ -133,6 +236,13 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+<<<<<<< HEAD
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-337" />
+    <option name="y" value="3" />
+    <option name="width" value="845" />
+    <option name="height" value="744" />
+=======
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
@@ -159,12 +269,14 @@
         </selected-state>
       </profile-state>
     </entry>
+>>>>>>> 7e3c64199c3c7cbf11b638391a6da088a03fd565
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -172,6 +284,8 @@
               <item name="Grad" type="b2602c69:ProjectViewProjectNode" />
               <item name="Grad" type="462c0819:PsiDirectoryNode" />
             </path>
+<<<<<<< HEAD
+=======
             <path>
               <item name="Grad" type="b2602c69:ProjectViewProjectNode" />
               <item name="Grad" type="462c0819:PsiDirectoryNode" />
@@ -182,27 +296,17 @@
               <item name="Grad" type="462c0819:PsiDirectoryNode" />
               <item name="hybrid" type="462c0819:PsiDirectoryNode" />
             </path>
+>>>>>>> 7e3c64199c3c7cbf11b638391a6da088a03fd565
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\saso_\PycharmProjects\demo\data2\internal_fixation" />
-      <recent name="C:\Users\saso_\PycharmProjects\demo\imgs" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\saso_\PycharmProjects\demo\imgs" />
-      <recent name="C:\Users\saso_\PycharmProjects\demo" />
-    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -216,8 +320,13 @@
       </list>
     </option>
   </component>
+<<<<<<< HEAD
+  <component name="RunManager" selected="Python.test">
+    <configuration name="PHogFeatures" type="PythonConfigurationType" factoryName="Python" temporary="true">
+=======
   <component name="RunManager" selected="Python.Histogram">
     <configuration name="Histogram" type="PythonConfigurationType" factoryName="Python" temporary="true">
+>>>>>>> 7e3c64199c3c7cbf11b638391a6da088a03fd565
       <module name="demo" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -225,18 +334,33 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
+<<<<<<< HEAD
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PHogFeatures.py" />
+=======
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Codes/Histogram" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Codes/Histogram/Histogram.py" />
+>>>>>>> 7e3c64199c3c7cbf11b638391a6da088a03fd565
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
+<<<<<<< HEAD
+    <configuration name="Svm_features_trial" type="PythonConfigurationType" factoryName="Python" temporary="true">
+=======
     <configuration name="Sklearn-FeatureSelection" type="PythonConfigurationType" factoryName="Python" temporary="true">
+>>>>>>> 7e3c64199c3c7cbf11b638391a6da088a03fd565
       <module name="demo" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -248,52 +372,25 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+<<<<<<< HEAD
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Svm_features_trial.py" />
+=======
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Codes/Sklearn-FeatureSelection.py" />
+>>>>>>> 7e3c64199c3c7cbf11b638391a6da088a03fd565
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
-    <configuration name="amira" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="demo" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/amira.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="demo1" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="demo" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/demo1.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
+<<<<<<< HEAD
     <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+=======
+    <configuration name="amira" type="PythonConfigurationType" factoryName="Python" temporary="true">
+>>>>>>> 7e3c64199c3c7cbf11b638391a6da088a03fd565
       <module name="demo" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -306,26 +403,90 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+<<<<<<< HEAD
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+=======
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/amira.py" />
+>>>>>>> 7e3c64199c3c7cbf11b638391a6da088a03fd565
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="trial (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="demo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\Sara\PycharmProjects\Grad\PHogFeatures.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="trial (2)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="demo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/trial.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
     <list>
+<<<<<<< HEAD
+      <item itemvalue="Python.test" />
+      <item itemvalue="Python.trial (1)" />
+      <item itemvalue="Python.PHogFeatures" />
+      <item itemvalue="Python.trial (2)" />
+      <item itemvalue="Python.Svm_features_trial" />
+=======
       <item itemvalue="Python.demo1" />
       <item itemvalue="Python.amira" />
       <item itemvalue="Python.test" />
       <item itemvalue="Python.Sklearn-FeatureSelection" />
       <item itemvalue="Python.Histogram" />
+>>>>>>> 7e3c64199c3c7cbf11b638391a6da088a03fd565
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.Histogram" />
         <item itemvalue="Python.test" />
+<<<<<<< HEAD
+        <item itemvalue="Python.Svm_features_trial" />
+        <item itemvalue="Python.trial (2)" />
+        <item itemvalue="Python.PHogFeatures" />
+        <item itemvalue="Python.trial (1)" />
+=======
         <item itemvalue="Python.Sklearn-FeatureSelection" />
         <item itemvalue="Python.amira" />
         <item itemvalue="Python.demo1" />
+>>>>>>> 7e3c64199c3c7cbf11b638391a6da088a03fd565
       </list>
     </recent_temporary>
   </component>
@@ -334,11 +495,11 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c69819b9-b5c7-4ac2-b836-48a85102bdf5" name="Default" comment="" />
-      <created>1537739658114</created>
+      <changelist id="c6de7611-72ff-4981-bc64-52e96c296322" name="Default Changelist" comment="" />
+      <created>1543339349796</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1537739658114</updated>
+      <updated>1543339349796</updated>
     </task>
     <servers />
   </component>
@@ -352,7 +513,22 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+=======
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+<<<<<<< HEAD
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24925596" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49924356" visible="true" weight="0.3878887" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+=======
+>>>>>>> 771718fd0174f63bac70ab04237e41d8e2a76419
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -370,23 +546,49 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+>>>>>>> 7e3c64199c3c7cbf11b638391a6da088a03fd565
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3289689" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3289689" />
+      <window_info anchor="bottom" id="Python Console" order="11" weight="0.3289689" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50075644" side_tool="true" weight="0.3289689" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="UnknownFeatures">
-    <option featureType="com.intellij.fileTypeFactory" implementationName="*.csv" />
-  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+<<<<<<< HEAD
+  <component name="editorHistoryManager">
+    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/keras/utils/conv_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="27" lean-forward="true" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/keras/utils/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/keras/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+=======
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -403,76 +605,123 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="23" column="19" lean-forward="true" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
+>>>>>>> 7e3c64199c3c7cbf11b638391a6da088a03fd565
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
+    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/keras/backend/tensorflow_backend.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="340">
+          <caret line="20" column="41" lean-forward="true" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
+=======
         <state relative-caret-position="153">
           <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+>>>>>>> 7e3c64199c3c7cbf11b638391a6da088a03fd565
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classifiers.py">
+    <entry file="file://$PROJECT_DIR$/OLDDATAFOLDERS/trial.py" />
+    <entry file="file://$USER_HOME$/python-3.6.7-package/Lib/site-packages/pymatbridge/__init__.py" />
+    <entry file="file://$USER_HOME$/python-3.5.4-package/Lib/site-packages/matlab/engine/matlabengine.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="1428">
+          <caret line="89" column="13" selection-start-line="89" selection-start-column="13" selection-end-line="89" selection-end-column="13" />
+=======
         <state relative-caret-position="663">
           <caret line="129" selection-start-line="129" selection-end-line="129" />
+>>>>>>> 7e3c64199c3c7cbf11b638391a6da088a03fd565
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
+    <entry file="file://$USER_HOME$/python-3.5.4-package/Lib/site-packages/pandas/compat/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="160">
+          <caret line="37" column="13" lean-forward="true" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+=======
         <state relative-caret-position="1995">
           <caret line="95" lean-forward="true" selection-start-line="95" selection-end-line="95" />
+>>>>>>> 7e3c64199c3c7cbf11b638391a6da088a03fd565
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classifiers.py">
+    <entry file="file://$USER_HOME$/python-3.5.4-package/Lib/site-packages/pandas/tests/sparse/frame/test_to_from_scipy.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="51">
+          <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+=======
         <state relative-caret-position="819">
           <caret line="129" lean-forward="true" selection-start-line="129" selection-end-line="129" />
+>>>>>>> 7e3c64199c3c7cbf11b638391a6da088a03fd565
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MURA-v1.1/train_labeled_studies.csv" />
-    <entry file="file://$PROJECT_DIR$/MURA-v1.1/train_image_paths.csv" />
-    <entry file="file://$PROJECT_DIR$/../leNet/knn.py" />
-    <entry file="file://$PROJECT_DIR$/../leNet/app.py" />
-    <entry file="file://$PROJECT_DIR$/../leNet/model/load.py" />
-    <entry file="file://$PROJECT_DIR$/imgs/abelbow3.png" />
-    <entry file="file://$PROJECT_DIR$/imgs/image3.png" />
-    <entry file="file://$PROJECT_DIR$/imgs/image2.png" />
-    <entry file="file://$PROJECT_DIR$/imgs/elbow1.png" />
-    <entry file="file://$PROJECT_DIR$/imgs/abelbow2.png" />
-    <entry file="file://$PROJECT_DIR$/imgs/abelbow1.png" />
-    <entry file="file://$PROJECT_DIR$/imgs/elbow2.png" />
-    <entry file="file://$PROJECT_DIR$/imgs/elbow3.png" />
-    <entry file="file://$PROJECT_DIR$/../final/BruteForce.py" />
-    <entry file="file://$PROJECT_DIR$/../final/OCR_EnglishAlphabetsKNN.py" />
-    <entry file="file://$PROJECT_DIR$/../final/svm_data.dat" />
-    <entry file="file://$PROJECT_DIR$/../final/OCR_HandWrittenKNN.py" />
-    <entry file="file://$PROJECT_DIR$/list.py" />
-    <entry file="file://$PROJECT_DIR$/svm_data.dat" />
-    <entry file="file://$PROJECT_DIR$/dataset.csv" />
-    <entry file="file://$PROJECT_DIR$/sample.csv" />
-    <entry file="file://$PROJECT_DIR$/svmtest.joblib" />
-    <entry file="file://$PROJECT_DIR$/../final/SVM-OCR-HandwrittenDigits.py" />
-    <entry file="file://$PROJECT_DIR$/demo2.py" />
-    <entry file="file://$PROJECT_DIR$/../final/SIFT.py" />
-    <entry file="file://$PROJECT_DIR$/../leNet/data/apple.npy" />
-    <entry file="file://$PROJECT_DIR$/data/abnormal/image3.png" />
-    <entry file="file://$PROJECT_DIR$/../leNet/train.py" />
-    <entry file="file://$PROJECT_DIR$/data/normal/image1.png" />
-    <entry file="file://$PROJECT_DIR$/data/ayhaga/abelbow3.png" />
-    <entry file="file://$PROJECT_DIR$/data/normal/image2.png" />
-    <entry file="file://$PROJECT_DIR$/svmtestdata.joblib" />
-    <entry file="file://$PROJECT_DIR$/amira.py" />
-    <entry file="file://$PROJECT_DIR$/cnn.py" />
-    <entry file="file://C:/Python64/Lib/site-packages/sklearn/metrics/classification.py" />
-    <entry file="file://$PROJECT_DIR$/../gradproj/Codes/EdgeDetection/EdgeDetection.py" />
-    <entry file="file://$PROJECT_DIR$/demo1.py" />
-    <entry file="file://$PROJECT_DIR$/Codes/Sklearn-FeatureSelection.py">
+    <entry file="file://$USER_HOME$/python-3.5.4-package/Lib/site-packages/matlab/_internal/mlarray_utils.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="143">
+          <caret line="118" selection-start-line="118" selection-end-line="118" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/python-3.5.4-package/Lib/site-packages/PIL/Image.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="2612" column="18" lean-forward="true" selection-start-line="2612" selection-start-column="18" selection-end-line="2612" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/python-3.5.4-package/Lib/site-packages/matlab/engine/fevalfuture.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="81" selection-start-line="81" selection-end-line="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/python-3.5.4-package/Lib/site-packages/dask/array/tests/test_stats.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dis_radio_(31).jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trial.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/New_Phog.py" />
+    <entry file="file://$PROJECT_DIR$/PHogFeatures.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1219">
+          <caret line="69" column="33" selection-start-line="69" selection-start-column="33" selection-end-line="69" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Svm_features_trial.py" />
+    <entry file="file://$USER_HOME$/python-3.5.4-package/Lib/site-packages/sklearn/svm/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="148" selection-start-line="148" selection-end-line="148" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/python-3.5.4-package/Lib/site-packages/sklearn/utils/validation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="569" selection-start-line="569" selection-end-line="569" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/python-3.5.4-package/Lib/site-packages/sklearn/metrics/classification.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1096" lean-forward="true" selection-start-line="1096" selection-end-line="1096" />
+=======
         <state relative-caret-position="424">
           <caret line="56" column="13" selection-start-line="56" selection-start-column="13" selection-end-line="56" selection-end-column="13" />
         </state>
@@ -497,22 +746,51 @@
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
+>>>>>>> 7e3c64199c3c7cbf11b638391a6da088a03fd565
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/HarrisCorner.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="294">
+          <caret line="217" column="21" selection-start-line="217" selection-start-column="6" selection-end-line="217" selection-end-column="21" />
+          <folding>
+            <element signature="e#1254#1429#0" />
+            <element signature="e#1479#1560#0" />
+            <element signature="e#1599#2048#0" />
+            <element signature="e#2080#2505#0" />
+            <element signature="e#2507#2532#0" />
+            <element signature="e#6378#6967#0" />
+            <element signature="e#6998#7532#0" />
+            <element signature="e#7571#8194#0" />
+            <element signature="e#8224#9127#0" />
+            <element signature="e#9157#9234#0" />
+            <element signature="e#9263#9320#0" />
+            <element signature="e#9350#12869#0" />
+            <element signature="e#12908#16296#0" />
+=======
         <state>
           <folding>
             <element signature="e#0#10#0" expanded="true" />
+>>>>>>> 7e3c64199c3c7cbf11b638391a6da088a03fd565
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/classifiers.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="646">
           <caret line="75" selection-start-line="75" selection-end-line="75" />
+=======
+<<<<<<< HEAD
+        <state relative-caret-position="153">
+          <caret line="315" column="38" selection-start-line="315" selection-start-column="38" selection-end-line="315" selection-end-column="38" />
+=======
+        <state relative-caret-position="229">
+          <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
+>>>>>>> 771718fd0174f63bac70ab04237e41d8e2a76419
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
@@ -535,6 +813,7 @@
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
+>>>>>>> 7e3c64199c3c7cbf11b638391a6da088a03fd565
         </state>
       </provider>
     </entry>
