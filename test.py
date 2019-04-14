@@ -376,7 +376,8 @@ def morph(img):
 
     #img4 = cv2.fastNlMeansDenoising(img, None, 10, 10, 7)
 
-    #src/dst img, d (diameter of each pixel), sigmaColor (Filter sigma in the color space), sigmaSpace (Filter sigma in the coordinate space)
+    #reduces noise 
+    #(src/dst img, d (diameter of each pixel), sigmaColor (Filter sigma in the color space), sigmaSpace (Filter sigma in the coordinate space))
     img = cv2.bilateralFilter(img, 9, 75, 75)
 
     kernel = np.ones((5, 5), np.uint8)
