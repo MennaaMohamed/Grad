@@ -384,6 +384,8 @@ class KnnAlg(Strategy):
 class RandomForestAlg(Strategy):
     def algorithm_interface(self, x_train, y_train, x_test, y_test):
 
+        #join a sequence of arrays along an existing axis
+        #axis = 0 The axis along which the arrays will be joined. If axis is None, arrays are flattened before use. Default is 0
         xtotal = np.concatenate((x_train, x_test), axis=0)
         ytotal = np.concatenate((y_train, y_test), axis=0)
 
@@ -391,6 +393,10 @@ class RandomForestAlg(Strategy):
         print(ytotal.shape)
         print(xtotal.shape)
 
+        #Similar to SVC with parameter kernel=’linear’, but implemented in terms of liblinear rather than libsvm,
+        # so it has more flexibility in the choice of penalties
+        # and loss functions and should scale better to large numbers of samples.
+        #
         lsvc = LinearSVC(C=0.01, penalty="l1", dual=False).fit(xtotal, ytotal)
         model = SelectFromModel(lsvc, prefit=True)
         X_new = model.transform(xtotal)
