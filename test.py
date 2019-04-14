@@ -376,12 +376,15 @@ def morph(img):
 
     #img4 = cv2.fastNlMeansDenoising(img, None, 10, 10, 7)
 
+    #src/dst img, d (diameter of each pixel), sigmaColor (Filter sigma in the color space), sigmaSpace (Filter sigma in the coordinate space)
     img = cv2.bilateralFilter(img, 9, 75, 75)
 
     kernel = np.ones((5, 5), np.uint8)
+    #gives an outline of the object  (src img, op type of morphological trans, kernel Structuring element)
     img = cv2.morphologyEx(img, cv2.MORPH_GRADIENT, kernel)
 
     kernel2 = np.array([[-1, -1, -1], [-1, 11, -1], [-1, -1, -1]])
+    #applies a linear filter to the image (src img, ddepth desired depth of img, kernel)
     img = cv2.filter2D(img, -1, kernel2)
 
     #img = cv2.morphologyEx(img, cv2.MORPH_CLOSE, kernel)
