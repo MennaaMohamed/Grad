@@ -97,8 +97,14 @@ class NaiveAlg(Strategy):
 
         #joblib.dump(clf, 'models/naive.joblib')
 
+        #Compute confusion matrix to evaluate the accuracy of a classification
         cm = confusion_matrix(y_test, y_pred)
+
+        #normailze = true  If False, return the number of correctly classified samples.
+        #Otherwise, return the fraction of correctly classified samples.
         acc = accuracy_score(y_test, y_pred, normalize=True, sample_weight=None)
+        #Build a text report showing the main classification metrics
+        #(Ground truth (correct) target values, Estimated targets as returned by a classifier)
         cr = classification_report(y_test, y_pred)
         print (cm)
         print(acc)
@@ -340,8 +346,13 @@ class SvmAlg(Strategy):
         svclassifier.fit(x_train, y_train)
         y_pred = svclassifier.predict(x_test)
 
+        # Compute confusion matrix to evaluate the accuracy of a classification
         cm = confusion_matrix(y_test, y_pred)
+        # normailze = true  If False, return the number of correctly classified samples.
+        # Otherwise, return the fraction of correctly classified samples.
         acc = accuracy_score(y_test, y_pred, normalize=True, sample_weight=None)
+        # Build a text report showing the main classification metrics
+        # (Ground truth (correct) target values, Estimated targets as returned by a classifier)
         cr = classification_report(y_test, y_pred)
 
         #joblib.dump(svclassifier, 'models/svmfs.joblib')
