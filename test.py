@@ -328,15 +328,21 @@ def feature_orb(img):
 #     return spoints[:95]
 
 def feature_baseline(img):
+    #Counting white pixels in each Row
+    #number of counted pixels
     result = []
+    #position of each counted pixel
     pos = []
 
     pixels = 0
+    #shape[0] Height , shape[1] Width
+    #White pixel: 200 or more
     for i in range(img.shape[0]):
         for j in range(img.shape[1]):
             if img[i, j] >= 200:
                 pixels+=1
         result.append(pixels)
+        #i = row number
         pos.append(i)
         pixels=0
 
@@ -346,7 +352,9 @@ def feature_baseline(img):
     print(imgarr.shape)
 
     axes = plt.gca()
+    #set_xlim([min,max])
     axes.set_xlim([0, 224])
+    #results = Counted pixels
     plt.plot(result)
     plt.ylabel('Pixels')
     plt.show()
