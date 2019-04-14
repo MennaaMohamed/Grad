@@ -38,32 +38,32 @@ from Codes.Histogram.Histogram import Count_XPixels, Count_YPixels
 img_rows = 224
 img_cols = 224
 
-
+"""
 def get_features(image_path, bins=8, angle=360., pyramid_levels=3):
-    """
-    Returns a feature vector containing a PHOG descriptor of a whole image.
-    :param image_path: Absolute path to an image
-    :param bins: Number of (orientation) bins on the histogram (optimal: 20)
-    :param angle: 180 or 360 (optimal: 360)
-    :param pyramid_levels: Number of pyramid levels (optimal: 3)
-    :return:
-    """
+    
+    # Returns a feature vector containing a PHOG descriptor of a whole image.
+    # :param image_path: Absolute path to an image
+    # :param bins: Number of (orientation) bins on the histogram (optimal: 20)
+    # :param angle: 180 or 360 (optimal: 360)
+    # :param pyramid_levels: Number of pyramid levels (optimal: 3)
+    # :return:
+    
 
     feature_vec = phog(image_path, bins, angle, pyramid_levels)
     feature_vec = feature_vec.T[0]  # Transpose vector, take the first array
     return feature_vec
 
 def phog(image_path, bin, angle, pyramid_levels):
-    """
-    Given and image I, phog computes the Pyramid Histogram of Oriented
-    Gradients over L pyramid levels and over a Region Of Interest.
-
-    :param image_path: Absolute path to an image of size MxN (Color or Gray)
-    :param bin: Number of (orientation) bins on the histogram
-    :param angle: 180 or 360
-    :param pyramid_levels: Number of pyramid levels
-    :return: Pyramid histogram of oriented gradients
-    """
+    
+    # Given and image I, phog computes the Pyramid Histogram of Oriented
+    # Gradients over L pyramid levels and over a Region Of Interest.
+    # 
+    # :param image_path: Absolute path to an image of size MxN (Color or Gray)
+    # :param bin: Number of (orientation) bins on the histogram
+    # :param angle: 180 or 360
+    # :param pyramid_levels: Number of pyramid levels
+    # :return: Pyramid histogram of oriented gradients
+    
 
     grayscale_img = image_path  # 0 converts it to grayscale
 
@@ -102,20 +102,20 @@ def phog(image_path, bin, angle, pyramid_levels):
     return p
 
 def bin_matrix(angle_values, edge_image, gradient_values, angle, bin):
-    """
-    Computes a Matrix (bm) with the same size of the image where
-    (i,j) position contains the histogram value for the pixel at position (i,j)
-    and another matrix (bv) where the position (i,j) contains the gradient
-    value for the pixel at position (i,j)
-
-    :param angle_values: Matrix containing the angle values
-    :param edge_image: Edge Image
-    :param gradient_values: Matrix containing the gradient values
-    :param angle: 180 or 360
-    :param bin: Number of bins on the histogram
-    :return: bm - Matrix with the histogram values
-            bv - Matrix with the gradient values (only for the pixels belonging to and edge)
-    """
+    
+    # Computes a Matrix (bm) with the same size of the image where
+    # (i,j) position contains the histogram value for the pixel at position (i,j)
+    # and another matrix (bv) where the position (i,j) contains the gradient
+    # value for the pixel at position (i,j)
+    # 
+    # :param angle_values: Matrix containing the angle values
+    # :param edge_image: Edge Image
+    # :param gradient_values: Matrix containing the gradient values
+    # :param angle: 180 or 360
+    # :param bin: Number of bins on the histogram
+    # :return: bm - Matrix with the histogram values
+    #         bv - Matrix with the gradient values (only for the pixels belonging to and edge)
+    
 
     # 8-orientations/connectivity structure (Matlab's default is 8 for bwlabel)
     structure_8 = [[1, 1, 1],
@@ -145,15 +145,15 @@ def bin_matrix(angle_values, edge_image, gradient_values, angle, bin):
     return [bm, bv]
 
 def phog_descriptor(bh, bv, pyramid_levels, bin):
-    """
-    Computes Pyramid Histogram of Oriented Gradient over an image.
-
-    :param bh: Matrix of bin histogram values
-    :param bv: Matrix of gradient values
-    :param pyramid_levels: Number of pyramid levels
-    :param bin: Number of bins
-    :return: Pyramid histogram of oriented gradients (phog descriptor)
-    """
+    
+    # Computes Pyramid Histogram of Oriented Gradient over an image.
+    # 
+    # :param bh: Matrix of bin histogram values
+    # :param bv: Matrix of gradient values
+    # :param pyramid_levels: Number of pyramid levels
+    # :param bin: Number of bins
+    # :return: Pyramid histogram of oriented gradients (phog descriptor)
+    
 
     p = np.empty((0, 1), dtype=int)  # dtype=np.float64? # vertical size 0, horizontal 1
 
@@ -192,7 +192,7 @@ def phog_descriptor(bh, bv, pyramid_levels, bin):
         p = np.divide(p, np.sum(p))
 
     return p
-
+"""
 def manual_canny(img):
     edges = cv2.Canny(img,170,200)
     return edges
