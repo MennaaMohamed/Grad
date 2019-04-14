@@ -403,6 +403,9 @@ def gabor(img):
     filters = []
     ksize = 31
     for theta in np.arange(0, np.pi, np.pi / 16):
+        #(ksize (size of filter returned), sigma (Standard deviation of the gaussian envelope),
+        # theta(Orientation of the normal to the parallel stripes of a Gabor function), lambd (Wavelength of the sinusoidal factor),
+        #gamma (Spatial aspect ratio), psi (Phase offset), ktype (Type of filter coefficients. It can be CV_32F or CV_64F))
         kern = cv2.getGaborKernel((ksize, ksize), 4.0, theta, 10.0, 0.5, 0, ktype=cv2.CV_32F)
     kern /= 1.5 * kern.sum()
     filters.append(kern)
