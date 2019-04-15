@@ -38,32 +38,32 @@ from Codes.Histogram.Histogram import Count_XPixels, Count_YPixels
 img_rows = 224
 img_cols = 224
 
-
+"""
 def get_features(image_path, bins=8, angle=360., pyramid_levels=3):
-    """
-    Returns a feature vector containing a PHOG descriptor of a whole image.
-    :param image_path: Absolute path to an image
-    :param bins: Number of (orientation) bins on the histogram (optimal: 20)
-    :param angle: 180 or 360 (optimal: 360)
-    :param pyramid_levels: Number of pyramid levels (optimal: 3)
-    :return:
-    """
+    
+    # Returns a feature vector containing a PHOG descriptor of a whole image.
+    # :param image_path: Absolute path to an image
+    # :param bins: Number of (orientation) bins on the histogram (optimal: 20)
+    # :param angle: 180 or 360 (optimal: 360)
+    # :param pyramid_levels: Number of pyramid levels (optimal: 3)
+    # :return:
+    
 
     feature_vec = phog(image_path, bins, angle, pyramid_levels)
     feature_vec = feature_vec.T[0]  # Transpose vector, take the first array
     return feature_vec
 
 def phog(image_path, bin, angle, pyramid_levels):
-    """
-    Given and image I, phog computes the Pyramid Histogram of Oriented
-    Gradients over L pyramid levels and over a Region Of Interest.
-
-    :param image_path: Absolute path to an image of size MxN (Color or Gray)
-    :param bin: Number of (orientation) bins on the histogram
-    :param angle: 180 or 360
-    :param pyramid_levels: Number of pyramid levels
-    :return: Pyramid histogram of oriented gradients
-    """
+    
+    # Given and image I, phog computes the Pyramid Histogram of Oriented
+    # Gradients over L pyramid levels and over a Region Of Interest.
+    # 
+    # :param image_path: Absolute path to an image of size MxN (Color or Gray)
+    # :param bin: Number of (orientation) bins on the histogram
+    # :param angle: 180 or 360
+    # :param pyramid_levels: Number of pyramid levels
+    # :return: Pyramid histogram of oriented gradients
+    
 
     grayscale_img = image_path  # 0 converts it to grayscale
 
@@ -102,20 +102,20 @@ def phog(image_path, bin, angle, pyramid_levels):
     return p
 
 def bin_matrix(angle_values, edge_image, gradient_values, angle, bin):
-    """
-    Computes a Matrix (bm) with the same size of the image where
-    (i,j) position contains the histogram value for the pixel at position (i,j)
-    and another matrix (bv) where the position (i,j) contains the gradient
-    value for the pixel at position (i,j)
-
-    :param angle_values: Matrix containing the angle values
-    :param edge_image: Edge Image
-    :param gradient_values: Matrix containing the gradient values
-    :param angle: 180 or 360
-    :param bin: Number of bins on the histogram
-    :return: bm - Matrix with the histogram values
-            bv - Matrix with the gradient values (only for the pixels belonging to and edge)
-    """
+    
+    # Computes a Matrix (bm) with the same size of the image where
+    # (i,j) position contains the histogram value for the pixel at position (i,j)
+    # and another matrix (bv) where the position (i,j) contains the gradient
+    # value for the pixel at position (i,j)
+    # 
+    # :param angle_values: Matrix containing the angle values
+    # :param edge_image: Edge Image
+    # :param gradient_values: Matrix containing the gradient values
+    # :param angle: 180 or 360
+    # :param bin: Number of bins on the histogram
+    # :return: bm - Matrix with the histogram values
+    #         bv - Matrix with the gradient values (only for the pixels belonging to and edge)
+    
 
     # 8-orientations/connectivity structure (Matlab's default is 8 for bwlabel)
     structure_8 = [[1, 1, 1],
@@ -145,15 +145,15 @@ def bin_matrix(angle_values, edge_image, gradient_values, angle, bin):
     return [bm, bv]
 
 def phog_descriptor(bh, bv, pyramid_levels, bin):
-    """
-    Computes Pyramid Histogram of Oriented Gradient over an image.
-
-    :param bh: Matrix of bin histogram values
-    :param bv: Matrix of gradient values
-    :param pyramid_levels: Number of pyramid levels
-    :param bin: Number of bins
-    :return: Pyramid histogram of oriented gradients (phog descriptor)
-    """
+    
+    # Computes Pyramid Histogram of Oriented Gradient over an image.
+    # 
+    # :param bh: Matrix of bin histogram values
+    # :param bv: Matrix of gradient values
+    # :param pyramid_levels: Number of pyramid levels
+    # :param bin: Number of bins
+    # :return: Pyramid histogram of oriented gradients (phog descriptor)
+    
 
     p = np.empty((0, 1), dtype=int)  # dtype=np.float64? # vertical size 0, horizontal 1
 
@@ -192,7 +192,7 @@ def phog_descriptor(bh, bv, pyramid_levels, bin):
         p = np.divide(p, np.sum(p))
 
     return p
-
+"""
 def manual_canny(img):
     edges = cv2.Canny(img,170,200)
     return edges
@@ -384,12 +384,16 @@ def morph(img):
 
     #img4 = cv2.fastNlMeansDenoising(img, None, 10, 10, 7)
 
+    #reduces noise 
+    #(src/dst img, d (diameter of each pixel), sigmaColor (Filter sigma in the color space), sigmaSpace (Filter sigma in the coordinate space))
     img = cv2.bilateralFilter(img, 9, 75, 75)
 
     kernel = np.ones((5, 5), np.uint8)
+    #gives an outline of the object  (src img, op type of morphological trans, kernel Structuring element)
     img = cv2.morphologyEx(img, cv2.MORPH_GRADIENT, kernel)
 
     kernel2 = np.array([[-1, -1, -1], [-1, 11, -1], [-1, -1, -1]])
+    #applies a linear filter to the image (src img, ddepth desired depth of img, kernel)
     img = cv2.filter2D(img, -1, kernel2)
 
     #img = cv2.morphologyEx(img, cv2.MORPH_CLOSE, kernel)
@@ -408,6 +412,9 @@ def gabor(img):
     filters = []
     ksize = 31
     for theta in np.arange(0, np.pi, np.pi / 16):
+        #(ksize (size of filter returned), sigma (Standard deviation of the gaussian envelope),
+        # theta(Orientation of the normal to the parallel stripes of a Gabor function), lambd (Wavelength of the sinusoidal factor),
+        #gamma (Spatial aspect ratio), psi (Phase offset), ktype (Type of filter coefficients. It can be CV_32F or CV_64F))
         kern = cv2.getGaborKernel((ksize, ksize), 4.0, theta, 10.0, 0.5, 0, ktype=cv2.CV_32F)
     kern /= 1.5 * kern.sum()
     filters.append(kern)
@@ -442,22 +449,26 @@ def gabor(img):
 def stat_features(img):
 
     ls = []
-
+    #Compute the standard deviation along the specified axis, while ignoring NaNs
     std = np.nanstd(img)
     #ls.append(std)
 
+    #Compute the variance along the specified axis, while ignoring NaNs.
     var = np.nanvar(img)
     #ls.append(var)
 
     #mean = np.nanmean(img)
     #ls.append(mean)
 
+    #Compute the weighted average along the specified axis.
     avg = np.average(img)
     #ls.append(avg)
 
+    #Return the sum of array elements over a given axis treating Not a Numbers (NaNs) as zero.
     sum = np.nansum(img)
     #ls.append(sum)
 
+    #Compute the median along the specified axis, while ignoring NaNs.
     median = np.nanmedian(img)
     #ls.append(median)
 
@@ -475,19 +486,22 @@ def stat_features(img):
     grd[grd == -inf] = 0
     ls.extend(grd)
     '''
-
+    #flatness of the histogram
     kurt = stats.kurtosis(img)
     kurt = np.asarray(kurt)
     kurt = kurt.round(decimals=6)
     kurt[kurt == -inf] = 0
     #ls.extend(kurt)
 
+    #Calculate the entropy of a distribution for given probability values.
+    #randomness of the intensity of values
     entr = stats.entropy(img)
     entr = np.asarray(entr)
     entr = entr.round(decimals=1) # at 1, alone = 0.62
     entr[entr == -inf] = 0
     ls.extend(entr)
 
+    #measures the asymmetry around the mean
     skew = stats.skew(img)
     skew = np.asarray(skew)
     skew = skew.round(decimals=5)
