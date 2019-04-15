@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="c69819b9-b5c7-4ac2-b836-48a85102bdf5" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Codes/Histogram/Histogram.py" beforeDir="false" afterPath="$PROJECT_DIR$/Codes/Histogram/Histogram.py" afterDir="false" />
+=======
     <list default="true" id="c6de7611-72ff-4981-bc64-52e96c296322" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/PHogFeatures.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/demo.iml" afterDir="false" />
@@ -30,6 +35,7 @@
       <change beforePath="$PROJECT_DIR$/hybrid/bonespur/bs_radio_(6).JPG" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/hybrid/bonespur/bs_radio_(7).JPG" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+>>>>>>> 771718fd0174f63bac70ab04237e41d8e2a76419
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,9 +45,13 @@
   </component>
   <component name="CoverageDataManager">
 <<<<<<< HEAD
+    <SUITE FILE_PATH="coverage/Grad$Histogram.coverage" NAME="Histogram Coverage Results" MODIFIED="1552440192784" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Codes/Histogram" />
+=======
+<<<<<<< HEAD
     <SUITE FILE_PATH="coverage/Grad$test.coverage" NAME="test Coverage Results" MODIFIED="1543344274915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
 =======
     <SUITE FILE_PATH="coverage/Grad$Histogram.coverage" NAME="Histogram Coverage Results" MODIFIED="1547409705798" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Codes/Histogram" />
+>>>>>>> 771718fd0174f63bac70ab04237e41d8e2a76419
     <SUITE FILE_PATH="coverage/Grad$Sklearn_FeatureSelection.coverage" NAME="Sklearn-FeatureSelection Coverage Results" MODIFIED="1541990025959" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Codes" />
     <SUITE FILE_PATH="coverage/Grad$test.coverage" NAME="test Coverage Results" MODIFIED="1541990673108" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
 >>>>>>> 7e3c64199c3c7cbf11b638391a6da088a03fd565
@@ -101,12 +111,10 @@
       <file leaf-file-name="Histogram.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Codes/Histogram/Histogram.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="442">
+              <caret line="80" column="12" selection-end-line="81" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
-                <element signature="e#752#890#0" />
-                <element signature="e#917#1243#0" />
               </folding>
             </state>
           </provider>
@@ -120,23 +128,10 @@
       <file leaf-file-name="classifiers.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classifiers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
+            <state relative-caret-position="646">
+              <caret line="75" selection-start-line="75" selection-end-line="75" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
-                <element signature="e#1204#1379#0" />
-                <element signature="e#1429#1510#0" />
-                <element signature="e#1549#1998#0" />
-                <element signature="e#2030#2455#0" />
-                <element signature="e#2485#6126#0" />
-                <element signature="e#2776#6126#0" />
-                <element signature="e#6793#7254#0" />
-                <element signature="e#7293#7916#0" />
-                <element signature="e#7946#8849#0" />
-                <element signature="e#8879#8956#0" />
-                <element signature="e#9072#12591#0" />
-                <element signature="e#9311#12591#0" />
-                <element signature="e#12630#16018#0" />
               </folding>
             </state>
           </provider>
@@ -251,7 +246,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="10" />
     <option name="width" value="1346" />
     <option name="height" value="728" />
@@ -518,6 +513,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+=======
     <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
 <<<<<<< HEAD
     <layout>
@@ -530,6 +528,7 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
 =======
+>>>>>>> 771718fd0174f63bac70ab04237e41d8e2a76419
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -537,12 +536,12 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30718955" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.30718955" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2246596" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="right" id="SciView" order="3" visible="true" weight="0.3547655" />
+      <window_info active="true" anchor="right" id="SciView" order="3" visible="true" weight="0.34493193" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
@@ -782,26 +781,18 @@
     <entry file="file://$PROJECT_DIR$/classifiers.py">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+        <state relative-caret-position="646">
+          <caret line="75" selection-start-line="75" selection-end-line="75" />
+=======
+<<<<<<< HEAD
         <state relative-caret-position="153">
           <caret line="315" column="38" selection-start-line="315" selection-start-column="38" selection-end-line="315" selection-end-column="38" />
 =======
         <state relative-caret-position="229">
           <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
+>>>>>>> 771718fd0174f63bac70ab04237e41d8e2a76419
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <element signature="e#1204#1379#0" />
-            <element signature="e#1429#1510#0" />
-            <element signature="e#1549#1998#0" />
-            <element signature="e#2030#2455#0" />
-            <element signature="e#2485#6126#0" />
-            <element signature="e#2776#6126#0" />
-            <element signature="e#6793#7254#0" />
-            <element signature="e#7293#7916#0" />
-            <element signature="e#7946#8849#0" />
-            <element signature="e#8879#8956#0" />
-            <element signature="e#9072#12591#0" />
-            <element signature="e#9311#12591#0" />
-            <element signature="e#12630#16018#0" />
           </folding>
         </state>
       </provider>
@@ -817,12 +808,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Codes/Histogram/Histogram.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="442">
+          <caret line="80" column="12" selection-end-line="81" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
-            <element signature="e#752#890#0" />
-            <element signature="e#917#1243#0" />
           </folding>
 >>>>>>> 7e3c64199c3c7cbf11b638391a6da088a03fd565
         </state>
