@@ -38,7 +38,6 @@ from Codes.Histogram.Histogram import Count_XPixels, Count_YPixels
 img_rows = 224
 img_cols = 224
 
-
 def get_features(image_path, bins=8, angle=360., pyramid_levels=3):
     """
     Returns a feature vector containing a PHOG descriptor of a whole image.
@@ -246,10 +245,8 @@ def preprocess(img):
 def preprocess2(img):
     ##Resize
     img = cv2.resize(img, (img_rows, img_cols))
-
     ##GreyScale
     img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-
     # Contrast stretching
     p2, p98 = np.percentile(img, (2, 98))
     img = exposure.rescale_intensity(img, in_range=(p2, p98)) #0.64!! farrah(1), 0.65 norm/abn
@@ -397,17 +394,26 @@ def morph(img):
     return img
 
 def gabor(img):
+
     filters = []
+
     ksize = 31
+
     for theta in np.arange(0, np.pi, np.pi / 16):
         kern = cv2.getGaborKernel((ksize, ksize), 4.0, theta, 10.0, 0.5, 0, ktype=cv2.CV_32F)
+
+
     kern /= 1.5 * kern.sum()
     filters.append(kern)
 
     accum = np.zeros_like(img)
+    print("1: ")
+    print(accum)
     for kern in filters:
         fimg = cv2.filter2D(img, cv2.CV_8UC3, kern)
+
     np.maximum(accum, fimg, accum)
+
     return accum
 
 # def haralick_features(image):
@@ -521,39 +527,38 @@ def loadimages():
                         print("contains radio")
                         img = preprocess2(img)
 
-                    ###Call Feature Extraction. ###
-
-                    #print(img.shape)
+                    # plt.hist(img.ravel(), 256, [0, 256]);
+                    # plt.show()
+                    # cv2.imshow("img", img)
+                    # cv2.waitKey()
+                    # cv2.destroyAllWindows()
                     #cv2.imwrite(imgname,img)
                     img = gabor(img)
                     #img = wave(img)
                     #img = feature_hog_desc(img)
                     #img = cv2.cvtColor(img, cv2.COLOR_GRAY2RGB)
-                    temp=[]
-                    arr1,arr2 = Count_XPixels(img)
 
-                    # arr1,arr2 = Count_YPixels(img)
+                    #temp=[]
 
-                    # temp.extend(arr1)
-                    # temp.extend(arr2)
+                    #arr1 = haralick_features(img)
+                    #temp.extend(arr1)
 
+                    #img = binary_features(img)
+                    #temp.extend(arr2)
 
-                    # img = np.asarray(temp)
+                    #arr3 = stat_features(img)
+                    #temp.extend(arr3)
 
                     #img = np.asarray(temp)
 
                     #img = feature_surf(img)
 
-                    img = get_features(img)
-
                     img = img.flatten()
                     imgarr = np.array([img])
-
                     print(imgarr.shape)
 
                     y = [label]
                     if i != 0:
-
                         xtotal = np.concatenate((imgarr, xtotal), axis=0)
                         ytotal = np.concatenate((y, ytotal), axis=0)
                     else:
@@ -562,6 +567,7 @@ def loadimages():
                     i += 1
             lbl +=1
         return xtotal, ytotal
+
 
 def main():
 

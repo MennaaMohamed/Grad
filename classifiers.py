@@ -322,21 +322,22 @@ class SvmAlg(Strategy):
     # algorithm 2
     def algorithm_interface(self, x_train, y_train, x_test, y_test):
 
-        '''
+
         xtotal = np.concatenate((x_train,x_test), axis=0)
         ytotal = np.concatenate((y_train, y_test), axis=0)
         print(x_train)
         print(ytotal.shape)
         print(xtotal.shape)
         lsvc = LinearSVC(C=0.01, penalty="l1", dual=False).fit(xtotal, ytotal)
+
         model = SelectFromModel(lsvc, prefit=True)
         X_new = model.transform(xtotal)
-        #joblib.dump(model, 'models/svmtransform.joblib')
+        joblib.dump(model, 'models/svm_gabor_selection.joblib')
         print(X_new.shape)
         x_train, x_test, y_train, y_test = train_test_split(X_new, ytotal, test_size=0.3, random_state=42)
-        '''
 
-        svclassifier = SVC(kernel='sigmoid')
+
+        svclassifier = SVC(kernel='linear')
         svclassifier.fit(x_train, y_train)
         y_pred = svclassifier.predict(x_test)
 
@@ -344,11 +345,13 @@ class SvmAlg(Strategy):
         acc = accuracy_score(y_test, y_pred, normalize=True, sample_weight=None)
         cr = classification_report(y_test, y_pred)
 
-        #joblib.dump(svclassifier, 'models/svmfs.joblib')
 
-        print (cm)
-        print(acc)
-        print(cr)
+        scores = cross_val_score(svclassifier,xtotal,ytotal,cv=5)
+        joblib.dump(svclassifier, 'models/svm_gabor.joblib')
+        print(scores)
+        # print (cm)
+        # print(acc)
+        # print(cr)
         #return cm, acc, cr
 
         pass
