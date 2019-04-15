@@ -354,7 +354,7 @@ def feature_baseline(img):
     #exit()
     return imgarr
 
-def wave(img):
+"""def wave(img):
     titles = ['Approximation', ' Horizontal detail',
               'Vertical detail', 'Diagonal detail']
     coeffs2 = pywt.dwt2(img, 'bior1.3')
@@ -371,7 +371,7 @@ def wave(img):
     plt.show()
     exit()
     pass
-
+"""
 def morph(img):
 
     #img4 = cv2.fastNlMeansDenoising(img, None, 10, 10, 7)
@@ -404,13 +404,14 @@ def gabor(img):
     filters = []
     ksize = 31
     for theta in np.arange(0, np.pi, np.pi / 16):
-        #(ksize (size of filter returned), sigma (Standard deviation of the gaussian envelope),
-        # theta(Orientation of the normal to the parallel stripes of a Gabor function), lambd (Wavelength of the sinusoidal factor),
-        #gamma (Spatial aspect ratio), psi (Phase offset), ktype (Type of filter coefficients. It can be CV_32F or CV_64F))
+        """(ksize (size of filter returned), sigma (Standard deviation of the gaussian envelope),
+        theta(Orientation of the normal to the parallel stripes of a Gabor function), lambd (Wavelength of the sinusoidal factor),
+        gamma (Spatial aspect ratio), psi (Phase offset), ktype (Type of filter coefficients. It can be CV_32F or CV_64F))"""
         kern = cv2.getGaborKernel((ksize, ksize), 4.0, theta, 10.0, 0.5, 0, ktype=cv2.CV_32F)
     kern /= 1.5 * kern.sum()
     filters.append(kern)
 
+    #Return an array of zeros with the same shape and type as a given array
     accum = np.zeros_like(img)
     for kern in filters:
         fimg = cv2.filter2D(img, cv2.CV_8UC3, kern)
