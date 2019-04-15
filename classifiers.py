@@ -348,6 +348,7 @@ class SvmAlg(Strategy):
 
         # Compute confusion matrix to evaluate the accuracy of a classification
         cm = confusion_matrix(y_test, y_pred)
+        #Accuracy classification score
         # normailze = true  If False, return the number of correctly classified samples.
         # Otherwise, return the fraction of correctly classified samples.
         acc = accuracy_score(y_test, y_pred, normalize=True, sample_weight=None)
@@ -428,8 +429,14 @@ class RandomForestAlg(Strategy):
 
         #joblib.dump(rfclassifier, 'models/randomforest.joblib')
 
+        # Compute confusion matrix to evaluate the accuracy of a classification
         cm = confusion_matrix(y_test, y_pred)
+        """Accuracy classification score
+        (normailze = true  If False, return the number of correctly classified samples.
+        Otherwise, return the fraction of correctly classified samples)"""
         acc = accuracy_score(y_test, y_pred, normalize=True, sample_weight=None)
+        """Build a text report showing the main classification metrics
+        (Ground truth (correct) target values, Estimated targets as returned by a classifier)"""
         cr = classification_report(y_test, y_pred)
         print(rfclassifier.feature_importances_)
         print (cm)
