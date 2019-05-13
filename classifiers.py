@@ -63,9 +63,15 @@ class DecisionTreeAlg(Strategy):
         clf = DecisionTreeClassifier(random_state=0)
         clf.fit(x_train, y_train)
         y_pred = clf.predict(x_test)
-
+        "Compute confusion matrix to evaluate the accuracy of a classification"
+        "(Ground truth (correct) target values, Estimated targets as returned by a classifier)"
         cm = confusion_matrix(y_test, y_pred)
+        "Accuracy classification score"
+        "normalize = true  If False, return the number of correctly classified samples"
+        "Otherwise, return the fraction of correctly classified samples"
         acc = accuracy_score(y_test, y_pred, normalize=True, sample_weight=None)
+        "Build a text report showing the main classification metrics"
+        "(y_test: Ground truth (correct) target values, y-pred: Estimated targets as returned by a classifier)"
         cr = classification_report(y_test, y_pred)
         print(cm)
         print(acc)
@@ -97,14 +103,14 @@ class NaiveAlg(Strategy):
 
         #joblib.dump(clf, 'models/naive.joblib')
 
-        #Compute confusion matrix to evaluate the accuracy of a classification
+        "Compute confusion matrix to evaluate the accuracy of a classification"
         cm = confusion_matrix(y_test, y_pred)
 
-        #normailze = true  If False, return the number of correctly classified samples.
-        #Otherwise, return the fraction of correctly classified samples.
+        "normailze = true  If False, return the number of correctly classified samples"
+        "Otherwise, return the fraction of correctly classified samples"
         acc = accuracy_score(y_test, y_pred, normalize=True, sample_weight=None)
-        #Build a text report showing the main classification metrics
-        #(Ground truth (correct) target values, Estimated targets as returned by a classifier)
+        "Build a text report showing the main classification metrics"
+        "(Ground truth (correct) target values, Estimated targets as returned by a classifier)"
         cr = classification_report(y_test, y_pred)
         print (cm)
         print(acc)
@@ -328,12 +334,18 @@ class SvmAlg(Strategy):
     # algorithm 2
     def algorithm_interface(self, x_train, y_train, x_test, y_test):
 
-
+        'np.concatenate: Join a sequence of arrays along an existing axis'
         xtotal = np.concatenate((x_train,x_test), axis=0)
         ytotal = np.concatenate((y_train, y_test), axis=0)
         print(x_train)
         print(ytotal.shape)
         print(xtotal.shape)
+        "LinearSVC: Similar to SVC with parameter kernel=’linear’, but implemented in terms of liblinear rather than libsvm, " \
+        "so it has more flexibility in the choice of penalties and loss functions " \
+        "and should scale better to large numbers of samples" \
+        "(C: Penalty parameter C of the error term, penalty: pecifies the norm used in the penalization. " \
+        "The ‘l2’ penalty is the standard used in SVC. The ‘l1’ leads to coef_ vectors that are sparse, dual: Select " \
+        "the algorithm to either solve the dual or primal optimization problem. Prefer dual=False when n_samples > n_features.)"
         lsvc = LinearSVC(C=0.01, penalty="l1", dual=False).fit(xtotal, ytotal)
 
         model = SelectFromModel(lsvc, prefit=True)
