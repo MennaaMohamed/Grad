@@ -328,26 +328,28 @@ class SvmAlg(Strategy):
     # algorithm 2
     def algorithm_interface(self, x_train, y_train, x_test, y_test):
 
-        '''
+
         xtotal = np.concatenate((x_train,x_test), axis=0)
         ytotal = np.concatenate((y_train, y_test), axis=0)
         print(x_train)
         print(ytotal.shape)
         print(xtotal.shape)
         lsvc = LinearSVC(C=0.01, penalty="l1", dual=False).fit(xtotal, ytotal)
+
         model = SelectFromModel(lsvc, prefit=True)
         X_new = model.transform(xtotal)
-        #joblib.dump(model, 'models/svmtransform.joblib')
+        joblib.dump(model, 'models/svm_gabor_selection.joblib')
         print(X_new.shape)
         x_train, x_test, y_train, y_test = train_test_split(X_new, ytotal, test_size=0.3, random_state=42)
-        '''
 
-        svclassifier = SVC(kernel='sigmoid')
+
+        svclassifier = SVC(kernel='linear')
         svclassifier.fit(x_train, y_train)
         y_pred = svclassifier.predict(x_test)
 
         # Compute confusion matrix to evaluate the accuracy of a classification
         cm = confusion_matrix(y_test, y_pred)
+        #Accuracy classification score
         # normailze = true  If False, return the number of correctly classified samples.
         # Otherwise, return the fraction of correctly classified samples.
         acc = accuracy_score(y_test, y_pred, normalize=True, sample_weight=None)
@@ -355,11 +357,13 @@ class SvmAlg(Strategy):
         # (Ground truth (correct) target values, Estimated targets as returned by a classifier)
         cr = classification_report(y_test, y_pred)
 
-        #joblib.dump(svclassifier, 'models/svmfs.joblib')
 
-        print (cm)
-        print(acc)
-        print(cr)
+        scores = cross_val_score(svclassifier,xtotal,ytotal,cv=5)
+        joblib.dump(svclassifier, 'models/svm_gabor.joblib')
+        print(scores)
+        # print (cm)
+        # print(acc)
+        # print(cr)
         #return cm, acc, cr
 
         pass
@@ -384,8 +388,8 @@ class KnnAlg(Strategy):
 class RandomForestAlg(Strategy):
     def algorithm_interface(self, x_train, y_train, x_test, y_test):
 
-        #join a sequence of arrays along an existing axis
-        #axis = 0 The axis along which the arrays will be joined. If axis is None, arrays are flattened before use. Default is 0
+        # join a sequence of arrays along an existing axis
+        # axis = 0 The axis along which the arrays will be joined. If axis is None, arrays are flattened before use. Default is 0
         xtotal = np.concatenate((x_train, x_test), axis=0)
         ytotal = np.concatenate((y_train, y_test), axis=0)
 
@@ -393,15 +397,30 @@ class RandomForestAlg(Strategy):
         print(ytotal.shape)
         print(xtotal.shape)
 
-        #Similar to SVC with parameter kernel=’linear’, but implemented in terms of liblinear rather than libsvm,
-        # so it has more flexibility in the choice of penalties
-        # and loss functions and should scale better to large numbers of samples.
-        #
+        """Similar to SVC with parameter kernel=’linear’, but implemented in terms of liblinear rather than libsvm,
+        so it has more flexibility in the choice of penalties
+        and loss functions and should scale better to large numbers of samples.
+        (Penalty parameter C of the error term, penalty =  The ‘l1’ leads to coef_ vectors that are sparse,
+        dual = Select the algorithm to either solve the dual or primal optimization problem.
+        Prefer dual=False when n_samples > n_features)"""
         lsvc = LinearSVC(C=0.01, penalty="l1", dual=False).fit(xtotal, ytotal)
+
+        """Meta-transformer for selecting features based on importance weights
+        (estimator = The base estimator from which the transformer is built,
+        prefit = true  Whether a prefit model is expected to be passed into the constructor directly or not.
+        If True, transform must be called directly and SelectFromModel cannot be used with cross_val_score,
+        GridSearchCV and similar utilities that clone the estimator. 
+        Otherwise train the model using fit and then transform to do feature selection.)
+        """
         model = SelectFromModel(lsvc, prefit=True)
+        #applies feature selection
         X_new = model.transform(xtotal)
         # joblib.dump(model, 'models/svmtransform.joblib')
         print(X_new.shape)
+
+        """Split arrays or matrices into random train and test subsets
+        (test_size = should be between 0 and 1
+        random_state = random_state is the seed used by the random number generator)"""
         x_train, x_test, y_train, y_test = train_test_split(X_new, ytotal, test_size=0.3, random_state=42)
 
         rfclassifier = RandomForestClassifier(n_estimators=100, random_state=0)
@@ -413,8 +432,14 @@ class RandomForestAlg(Strategy):
 
         #joblib.dump(rfclassifier, 'models/randomforest.joblib')
 
+        # Compute confusion matrix to evaluate the accuracy of a classification
         cm = confusion_matrix(y_test, y_pred)
+        """Accuracy classification score
+        (normailze = true  If False, return the number of correctly classified samples.
+        Otherwise, return the fraction of correctly classified samples)"""
         acc = accuracy_score(y_test, y_pred, normalize=True, sample_weight=None)
+        """Build a text report showing the main classification metrics
+        (Ground truth (correct) target values, Estimated targets as returned by a classifier)"""
         cr = classification_report(y_test, y_pred)
         print(rfclassifier.feature_importances_)
         print (cm)
