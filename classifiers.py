@@ -796,3 +796,26 @@ class CNN2(Strategy):
         evaluation = model.evaluate(x_test, y_test)
 
         print(evaluation)
+
+class oneVsAll(Strategy):
+    def algorithm_interface(self, x_train, y_train, x_test, y_test):
+        clf = svm.OneClassSVM(nu=0.1, kernel="rbf", gamma=0.1)
+        clf.fit(x_train)
+        y_pred_train = clf.predict(x_train)
+        y_pred_test = clf.predict(x_test)
+        # joblib.dump(clf, 'models/naive.joblib')
+
+        # Compute confusion matrix to evaluate the accuracy of a classification
+        cm = confusion_matrix(y_test, y_pred_test)
+
+        # normailze = true  If False, return the number of correctly classified samples.
+        # Otherwise, return the fraction of correctly classified samples.
+        acc = accuracy_score(y_test, y_pred_test, normalize=True, sample_weight=None)
+        # Build a text report showing the main classification metrics
+        # (Ground truth (correct) target values, Estimated targets as returned by a classifier)
+        cr = classification_report(y_test, y_pred_test)
+        print(cm)
+        print(acc)
+        print(cr)
+        return cm, acc, cr
+

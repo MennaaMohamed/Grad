@@ -37,9 +37,6 @@ from Codes.Histogram.Histogram import Count_XPixels, Count_YPixels
 
 img_rows = 224
 img_cols = 224
-
-"""
->>>>>>> 20c19d5aa2e842d050d1493c1f66fe4e6a93e7cd
 def get_features(image_path, bins=8, angle=360., pyramid_levels=3):
     
     # Returns a feature vector containing a PHOG descriptor of a whole image.
@@ -193,7 +190,8 @@ def phog_descriptor(bh, bv, pyramid_levels, bin):
         p = np.divide(p, np.sum(p))
 
     return p
-"""
+
+
 def manual_canny(img):
     edges = cv2.Canny(img,170,200)
     return edges
