@@ -456,26 +456,26 @@ def gabor(img):
 def stat_features(img):
 
     ls = []
-    #Compute the standard deviation along the specified axis, while ignoring NaNs
+    "Compute the standard deviation along the specified axis, while ignoring NaNs"
     std = np.nanstd(img)
     #ls.append(std)
 
-    #Compute the variance along the specified axis, while ignoring NaNs.
+    "Compute the variance along the specified axis, while ignoring NaNs"
     var = np.nanvar(img)
     #ls.append(var)
 
     #mean = np.nanmean(img)
     #ls.append(mean)
 
-    #Compute the weighted average along the specified axis.
+    "Compute the weighted average along the specified axis"
     avg = np.average(img)
     #ls.append(avg)
 
-    #Return the sum of array elements over a given axis treating Not a Numbers (NaNs) as zero.
+    "Return the sum of array elements over a given axis treating Not a Numbers (NaNs) as zero"
     sum = np.nansum(img)
     #ls.append(sum)
 
-    #Compute the median along the specified axis, while ignoring NaNs.
+    "Compute the median along the specified axis, while ignoring NaNs"
     median = np.nanmedian(img)
     #ls.append(median)
 
@@ -493,22 +493,22 @@ def stat_features(img):
     grd[grd == -inf] = 0
     ls.extend(grd)
     '''
-    #flatness of the histogram
+    "flatness of the histogram"
     kurt = stats.kurtosis(img)
     kurt = np.asarray(kurt)
     kurt = kurt.round(decimals=6)
     kurt[kurt == -inf] = 0
     #ls.extend(kurt)
 
-    #Calculate the entropy of a distribution for given probability values.
-    #randomness of the intensity of values
+    "Calculate the entropy of a distribution for given probability values"
+    "randomness of the intensity of values"
     entr = stats.entropy(img)
     entr = np.asarray(entr)
     entr = entr.round(decimals=1) # at 1, alone = 0.62
     entr[entr == -inf] = 0
     ls.extend(entr)
 
-    #measures the asymmetry around the mean
+    "measures the asymmetry around the mean"
     skew = stats.skew(img)
     skew = np.asarray(skew)
     skew = skew.round(decimals=5)
