@@ -354,23 +354,34 @@ class SvmAlg(Strategy):
         print(X_new.shape)
         x_train, x_test, y_train, y_test = train_test_split(X_new, ytotal, test_size=0.3, random_state=42)
 
-
+        "C-Support Vector Classification" \
+        "The implementation is based on libsvm. The fit time scales at least " \
+        "quadratically with the number of samples and may be impractical " \
+        "beyond tens of thousands of samples" \
+        "(kernel: Specifies the kernel type to be used in the algorithm. " \
+        "It must be one of ‘linear’, ‘poly’, ‘rbf’, ‘sigmoid’, ‘precomputed’ or a callable)"
         svclassifier = SVC(kernel='linear')
         svclassifier.fit(x_train, y_train)
         y_pred = svclassifier.predict(x_test)
 
-        # Compute confusion matrix to evaluate the accuracy of a classification
+        "Compute confusion matrix to evaluate the accuracy of a classification"
         cm = confusion_matrix(y_test, y_pred)
-        #Accuracy classification score
-        # normailze = true  If False, return the number of correctly classified samples.
-        # Otherwise, return the fraction of correctly classified samples.
+        "Accuracy classification score"
+        "normailze = true  If False, return the number of correctly classified samples"
+        "Otherwise, return the fraction of correctly classified samples"
         acc = accuracy_score(y_test, y_pred, normalize=True, sample_weight=None)
-        # Build a text report showing the main classification metrics
-        # (Ground truth (correct) target values, Estimated targets as returned by a classifier)
+        "Build a text report showing the main classification metrics"
+        "(Ground truth (correct) target values, Estimated targets as returned by a classifier)"
         cr = classification_report(y_test, y_pred)
 
-
+        "Evaluate a score by cross-validation" \
+        "Determines the cross-validation splitting strategy" \
+        "(estimator = svcclassifier: The object to use to fit the data," \
+        "xtotal: The data to fit, ytotal: The target variable to try to predict in the case of supervised learning," \
+        "cv=5: Determines the cross-validation splitting strategy to specify the number of folds in a (Stratified)KFold"
         scores = cross_val_score(svclassifier,xtotal,ytotal,cv=5)
+        "Persist an arbitrary Python object into one file" \
+        "(value=svclassifier: any Python object, filename)"
         joblib.dump(svclassifier, 'models/svm_gabor.joblib')
         print(scores)
         # print (cm)
@@ -400,8 +411,8 @@ class KnnAlg(Strategy):
 class RandomForestAlg(Strategy):
     def algorithm_interface(self, x_train, y_train, x_test, y_test):
 
-        # join a sequence of arrays along an existing axis
-        # axis = 0 The axis along which the arrays will be joined. If axis is None, arrays are flattened before use. Default is 0
+        "join a sequence of arrays along an existing axis"""
+        "axis = 0 The axis along which the arrays will be joined. If axis is None, arrays are flattened before use. Default is 0"
         xtotal = np.concatenate((x_train, x_test), axis=0)
         ytotal = np.concatenate((y_train, y_test), axis=0)
 
@@ -425,7 +436,7 @@ class RandomForestAlg(Strategy):
         Otherwise train the model using fit and then transform to do feature selection.)
         """
         model = SelectFromModel(lsvc, prefit=True)
-        #applies feature selection
+        "applies feature selection"
         X_new = model.transform(xtotal)
         # joblib.dump(model, 'models/svmtransform.joblib')
         print(X_new.shape)
@@ -434,7 +445,9 @@ class RandomForestAlg(Strategy):
         (test_size = should be between 0 and 1
         random_state = random_state is the seed used by the random number generator)"""
         x_train, x_test, y_train, y_test = train_test_split(X_new, ytotal, test_size=0.3, random_state=42)
-
+        "If int, random_state is the seed used by the random number generator; " \
+        "If RandomState instance, random_state is the random number generator; " \
+        "If None, the random number generator is the RandomState instance used by np.random."
         rfclassifier = RandomForestClassifier(n_estimators=100, random_state=0)
 
         #rfclassifier = RandomForestClassifier(n_estimators=100, max_depth=2,random_state = 0)
@@ -444,7 +457,7 @@ class RandomForestAlg(Strategy):
 
         #joblib.dump(rfclassifier, 'models/randomforest.joblib')
 
-        # Compute confusion matrix to evaluate the accuracy of a classification
+        "Compute confusion matrix to evaluate the accuracy of a classification"
         cm = confusion_matrix(y_test, y_pred)
         """Accuracy classification score
         (normailze = true  If False, return the number of correctly classified samples.
@@ -799,6 +812,13 @@ class CNN2(Strategy):
 
 class oneVsAll(Strategy):
     def algorithm_interface(self, x_train, y_train, x_test, y_test):
+        "Unsupervised Outlier Detection, Estimate the support of a high-dimensional distribution"
+        "The implementation is based on libsvm" \
+        "(nu: An upper bound on the fraction of training errors and a lower bound of the fraction of support vectors" \
+        "kernel: Specifies the kernel type to be used in the algorithm. " \
+        "It must be one of ‘linear’, ‘poly’, ‘rbf’, ‘sigmoid’, ‘precomputed’ or a callable. If none is given, " \
+        "‘rbf’ will be used. If a callable is given it is used to precompute the kernel matrix," \
+        "gamma: Kernel coefficient for ‘rbf’, ‘poly’ and ‘sigmoid’.)"
         clf = svm.OneClassSVM(nu=0.1, kernel="rbf", gamma=0.1)
         clf.fit(x_train)
         y_pred_train = clf.predict(x_train)
