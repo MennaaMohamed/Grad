@@ -37,7 +37,6 @@ from Codes.Histogram.Histogram import Count_XPixels, Count_YPixels
 
 img_rows = 224
 img_cols = 224
-
 """
 def get_features(image_path, bins=8, angle=360., pyramid_levels=3):
     
@@ -193,6 +192,7 @@ def phog_descriptor(bh, bv, pyramid_levels, bin):
 
     return p
 """
+
 def manual_canny(img):
     edges = cv2.Canny(img,170,200)
     return edges
@@ -566,7 +566,7 @@ def loadimages():
 
                     #img = feature_surf(img)
 
-                    img = get_features(img)
+                    # img = get_features(img)
 
                     img = img.flatten()
                     imgarr = np.array([img])
