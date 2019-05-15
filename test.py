@@ -1,3 +1,5 @@
+from builtins import print
+
 import cv2
 import numpy as np
 
@@ -193,11 +195,16 @@ def phog_descriptor(bh, bv, pyramid_levels, bin):
 
 
 def manual_canny(img):
+    #Edge detection and reduce noise
+    #(img, threshold1 (minVal), threshold2(maxVal))
     edges = cv2.Canny(img,170,200)
     return edges
 
 def auto_canny(image, sigma=0.33):
+    #(img, ksize – Gaussian kernel size (width and height and must be +ve and odd number),
+    # sigmaY=0 Gaussian kernel standard deviation in Y direction)
     blurred = cv2.GaussianBlur(image, (3, 3), 0)
+    #(img, threshold1, threshold2)
     wide = cv2.Canny(blurred, 10, 200)
     tight = cv2.Canny(blurred, 225, 250)
     v = np.median(blurred)
@@ -207,8 +214,11 @@ def auto_canny(image, sigma=0.33):
     return edged
 
 def Dilated_Canny(image):
+    # (img, ksize – Gaussian kernel size ,sigmaY=0 Gaussian kernel standard deviation in Y direction)
     gray = cv2.GaussianBlur(image, (7, 7), 0)
+    #(img, threshold1, threshold2)
     edged = cv2.Canny(gray, 50, 100)
+    #(dilate(img, kernel, no. of iterations))
     edged = cv2.dilate(edged, None, iterations=1)
     edged = cv2.erode(edged, None, iterations=1)
     #cv2.imshow("edge", edged)
@@ -253,53 +263,53 @@ def preprocess2(img):
 
     return img
 
-def feature_hog(img):
-    ##Call edge detection here if needed.. ##
-
-    #img = Dilated_Canny(img)
-    #img = auto_canny(img)
-    #img = manual_canny(img)
-
-    ##hog function
-    fd, himg = hog(img, orientations=8, pixels_per_cell=(16, 16), cells_per_block=(1, 1), visualize=True,
-                  multichannel=False)
-    return himg
-
-
-# def call_matlab(img):
+# def feature_hog(img):
+#     ##Call edge detection here if needed.. ##
 #
-#     eng = matlab.engine.start_matlab()
-#     img = Image.fromarray(img, 'RGB')
-#     image_mat = matlab.uint8(list(img.getdata()))
-#     image_mat.reshape((img.size[0], img.size[1], 3))
-#     ret = eng.anna_phog_demo(image_mat)
-#     return ret
-
-def feature_hog_desc(img):
-    winSize = (img_rows, img_cols)
-    blockSize = (112, 112)
-    blockStride = (7, 7)
-    cellSize = (56, 56)
-
-    nbins = 9
-    derivAperture = 1
-    winSigma = -1.
-    histogramNormType = 0
-    L2HysThreshold = 0.2
-    gammaCorrection = 0
-    nlevels = 64
-    useSignedGradients = True
-
-    #img = Dilated_Canny(img)
-
-    hog = cv2.HOGDescriptor(winSize, blockSize, blockStride, cellSize, nbins, derivAperture, winSigma,
-                            histogramNormType, L2HysThreshold, gammaCorrection, nlevels, useSignedGradients)
-
-    descriptor = hog.compute(img)
-    print(descriptor)
-    print(descriptor.shape)
-
-    return descriptor
+#     #img = Dilated_Canny(img)
+#     #img = auto_canny(img)
+#     #img = manual_canny(img)
+#
+#     ##hog function
+#     fd, himg = hog(img, orientations=8, pixels_per_cell=(16, 16), cells_per_block=(1, 1), visualize=True,
+#                   multichannel=False)
+#     return himg
+#
+#
+# # def call_matlab(img):
+# #
+# #     eng = matlab.engine.start_matlab()
+# #     img = Image.fromarray(img, 'RGB')
+# #     image_mat = matlab.uint8(list(img.getdata()))
+# #     image_mat.reshape((img.size[0], img.size[1], 3))
+# #     ret = eng.anna_phog_demo(image_mat)
+# #     return ret
+#
+# def feature_hog_desc(img):
+#     winSize = (img_rows, img_cols)
+#     blockSize = (112, 112)
+#     blockStride = (7, 7)
+#     cellSize = (56, 56)
+#
+#     nbins = 9
+#     derivAperture = 1
+#     winSigma = -1.
+#     histogramNormType = 0
+#     L2HysThreshold = 0.2
+#     gammaCorrection = 0
+#     nlevels = 64
+#     useSignedGradients = True
+#
+#     #img = Dilated_Canny(img)
+#
+#     hog = cv2.HOGDescriptor(winSize, blockSize, blockStride, cellSize, nbins, derivAperture, winSigma,
+#                             histogramNormType, L2HysThreshold, gammaCorrection, nlevels, useSignedGradients)
+#
+#     descriptor = hog.compute(img)
+#     print(descriptor)
+#     print(descriptor.shape)
+#
+#     return descriptor
 
 def feature_orb(img):
     orb = cv2.ORB_create()
@@ -350,6 +360,7 @@ def feature_baseline(img):
 
     axes = plt.gca()
     #set_xlim([min,max])
+    # 224 (img_rows)
     axes.set_xlim([0, 224])
     #results = Counted pixels
     plt.plot(result)
@@ -576,15 +587,19 @@ def loadimages():
 
                     #img = feature_surf(img)
 
+                    #converts any array to a one-dimensional array with values taken row-wise (row by row)
                     img = img.flatten()
                     imgarr = np.array([img])
+                    # rows and columns
                     print(imgarr.shape)
 
                     y = [label]
                     if i != 0:
+                        # concatenating on the previous created array
                         xtotal = np.concatenate((imgarr, xtotal), axis=0)
                         ytotal = np.concatenate((y, ytotal), axis=0)
                     else:
+                        #adding the image to an empty array
                         xtotal = imgarr
                         ytotal = y
                     i += 1

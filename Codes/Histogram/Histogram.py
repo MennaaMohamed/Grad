@@ -16,7 +16,7 @@ def Count_XPixels(img):
     pixels = 0
     for i in range(224):
         for j in range(224):
-            if img[i, j] == 255:
+            if img[i,j] == 255:
                 pixels+=1
         result.append(pixels)
         pos.append(i)
@@ -66,8 +66,8 @@ def BothOnX(count,pos):
 
 # Draw on X-axis and Y-axis
 #
-# pixel_count , pixel_pos , maxsize = Count_XPixels()
-# Graph_Xaxis(pixel_count,pixel_pos,maxsize)
+pixel_count , pixel_pos , maxsize = Count_XPixels()
+Graph_Xaxis(pixel_count,pixel_pos,maxsize)
 # pixel_count , pixel_pos , maxsize = Count_YPixels()
 # Graph_Yaxis(pixel_count,pixel_pos,maxsize)
 
